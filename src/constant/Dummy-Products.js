@@ -1,5 +1,5 @@
 export const DUMMY_PRODUCTS = [
-    {id: 'p1', name: 'Phones', image: '/asset/png/phone2.png' },
+    {id: 'p1', name: 'Phones', image: '/asset/png/phone.png' },
     {id: 'p2', name: 'Cosmetic', image: '/asset/png/cosmetic.png'},
     {id: 'p3', name: 'Furniture', image: '/asset/png/chair.png'},
     {id: 'p4', name: 'Electronics', image: '/asset/png/speaker.png' },

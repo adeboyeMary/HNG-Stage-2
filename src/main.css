@@ -553,15 +553,6 @@ video {
   position: relative;
 }
 
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-.top-9 {
-  top: 2.25rem;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -578,52 +569,70 @@ video {
   margin: auto;
 }
 
-.m-3 {
-  margin: 0.75rem;
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-2\.5 {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 
 .mr-2 {
   margin-right: 0.5rem;
 }
 
-.mt-\[8rem\] {
-  margin-top: 8rem;
-}
-
-.mt-\[5rem\] {
-  margin-top: 5rem;
-}
-
-.mt-\[6rem\] {
-  margin-top: 6rem;
-}
-
-.mt-\[5\.8rem\] {
-  margin-top: 5.8rem;
-}
-
-.mt-\[5\.6rem\] {
-  margin-top: 5.6rem;
-}
-
-.mt-\[5\.4rem\] {
-  margin-top: 5.4rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .mt-3 {
   margin-top: 0.75rem;
 }
 
+.mt-\[5\.4rem\] {
+  margin-top: 5.4rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2\.5 {
+  margin-bottom: 0.625rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-7 {
+  margin-left: 1.75rem;
+}
+
+.mr-7 {
+  margin-right: 1.75rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
 
-.mr-3 {
-  margin-right: 0.75rem;
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .flex {
@@ -638,12 +647,44 @@ video {
   height: 83px;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
+.h-\[239px\] {
+  height: 239px;
+}
+
+.h-\[39px\] {
+  height: 39px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
+.h-\[58px\] {
+  height: 58px;
+}
+
+.h-\[88px\] {
+  height: 88px;
+}
+
+.h-\[4rem\] {
+  height: 4rem;
+}
+
 .w-\[100\%\] {
   width: 100%;
 }
 
 .w-\[289\.5px\] {
   width: 289.5px;
+}
+
+.w-\[40\%\] {
+  width: 40%;
 }
 
 .w-\[45\.5px\] {
@@ -662,28 +703,56 @@ video {
   width: 98%;
 }
 
-.w-\[97\%\] {
-  width: 97%;
+.w-\[10\%\] {
+  width: 10%;
 }
 
-.w-\[96\%\] {
-  width: 96%;
+.w-\[5\%\] {
+  width: 5%;
 }
 
-.w-\[95\%\] {
-  width: 95%;
+.w-\[140px\] {
+  width: 140px;
 }
 
-.w-\[40\%\] {
-  width: 40%;
+.w-\[138px\] {
+  width: 138px;
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
+.w-\[88px\] {
+  width: 88px;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[5rem\] {
+  width: 5rem;
 }
 
 .flex-row {
   flex-direction: row;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .overflow-x-auto {
@@ -694,32 +763,40 @@ video {
   white-space: nowrap;
 }
 
-.rounded-\[4px\] {
-  border-radius: 4px;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
+.rounded-\[6px\] {
+  border-radius: 6px;
 }
 
 .rounded-md {
   border-radius: 0.375rem;
 }
 
-.rounded-\[5px\] {
-  border-radius: 5px;
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
-.rounded-\[6px\] {
-  border-radius: 6px;
+.rounded-\[50\%\] {
+  border-radius: 50%;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.border-\[1px\] {
+  border-width: 1px;
 }
 
 .border-2 {
   border-width: 2px;
 }
 
-.border-\[1px\] {
-  border-width: 1px;
+.border-solid {
+  border-style: solid;
 }
 
 .border-\[\#EDEDED\] {
@@ -746,12 +823,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.object-cover {
+  object-fit: cover;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
 
-.p-\[10px\] {
-  padding: 10px;
+.p-3 {
+  padding: 0.75rem;
 }
 
 .px-\[10px\] {
@@ -781,28 +862,24 @@ video {
   padding-top: 1.25rem;
 }
 
-.pt-8 {
-  padding-top: 2rem;
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
-.pt-\[8\%\] {
-  padding-top: 8%;
+.pb-2\.5 {
+  padding-bottom: 0.625rem;
 }
 
-.pt-\[10\%\] {
-  padding-top: 10%;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
-.pt-\[4rem\] {
-  padding-top: 4rem;
+.pt-2\.5 {
+  padding-top: 0.625rem;
 }
 
-.pt-\[6rem\] {
-  padding-top: 6rem;
-}
-
-.pt-\[8rem\] {
-  padding-top: 8rem;
+.pl-1 {
+  padding-left: 0.25rem;
 }
 
 .text-center {
@@ -830,10 +907,4 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  .lg\:hidden {
-    display: none;
-  }
 }

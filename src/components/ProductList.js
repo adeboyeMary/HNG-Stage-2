@@ -11,9 +11,9 @@ import { DUMMY_DEALS } from '../constant/Dummy_deals';
 const ProductList = () => {
 
     return (
-        <div className='bg-[#EDEDED] w-[100%] py-2.5 relative mt-[5.4rem]'>
+        <div className='bg-[#EDEDED] w-[100%] pt-2.5 relative mt-[5.4rem]'>
             <div className=' m-auto '>
-                <img src={pagePoster} alt='pagePoster' className='w-[98%] m-auto rounded-[6px]' />
+                <img src={pagePoster} alt='pagePoster' className='w-[98%] m-auto mb-2.5 rounded-[6px]' />
             </div>
             <ShopByCategory items={DUMMY_PRODUCTS} />
             <BestDeal />
