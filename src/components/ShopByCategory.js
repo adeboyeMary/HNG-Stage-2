@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import HorizontalScroller from './HorizontalScroller';
 import Card from './ui/Card';
 
@@ -11,12 +13,16 @@ const ShopByCategory = ({items}) => {
             <HorizontalScroller>
                 <ul className='bg-white w-[94-67%] text-black mr-2 flex flex-row p'>
                     {items.map((item) => (
-                        <Card>
-                        <li key={item.key} className='mr-2'>
-                            <img src={item.image} alt={item.name} className='w-[5rem] h-[4rem] object-cover rounded-[50%]' />
-                            <p className='text-center font-normal mt-3'>{item.name}</p>
-                        </li>
-                        </Card>
+                        <Link to='/checkout'>
+                            <Card>
+                                <li key={item.key} className='mr-2'>
+                                    <div className='bg-[#F5F5F5] w-[82px] h-[82px] rounded-[54%] pt-1'>
+                                        <img src={item.image} alt={item.name} className='m-auto rounded-[50%]' />
+                                    </div>
+                                    <p className='text-center font-normal mt-3'>{item.name}</p>
+                                </li>
+                            </Card>
+                        </Link>
                 ) )}
                 </ul>
             </HorizontalScroller>

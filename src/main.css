@@ -579,6 +579,16 @@ video {
   margin-bottom: 0.625rem;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-3\.5 {
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -675,6 +685,34 @@ video {
   height: 4rem;
 }
 
+.h-\[134px\] {
+  height: 134px;
+}
+
+.h-\[104px\] {
+  height: 104px;
+}
+
+.h-\[80px\] {
+  height: 80px;
+}
+
+.h-\[82px\] {
+  height: 82px;
+}
+
+.h-\[227px\] {
+  height: 227px;
+}
+
+.h-\[120px\] {
+  height: 120px;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
 .w-\[100\%\] {
   width: 100%;
 }
@@ -735,6 +773,34 @@ video {
   width: 5rem;
 }
 
+.w-\[134px\] {
+  width: 134px;
+}
+
+.w-\[104px\] {
+  width: 104px;
+}
+
+.w-\[80px\] {
+  width: 80px;
+}
+
+.w-\[82px\] {
+  width: 82px;
+}
+
+.w-\[227px\] {
+  width: 227px;
+}
+
+.w-\[120px\] {
+  width: 120px;
+}
+
+.w-\[165px\] {
+  width: 165px;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -757,6 +823,10 @@ video {
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.whitespace-normal {
+  white-space: normal;
 }
 
 .whitespace-nowrap {
@@ -785,6 +855,14 @@ video {
 
 .rounded-sm {
   border-radius: 0.125rem;
+}
+
+.rounded-\[55\%\] {
+  border-radius: 55%;
+}
+
+.rounded-\[54\%\] {
+  border-radius: 54%;
 }
 
 .border-\[1px\] {
@@ -823,6 +901,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#807E7E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(128 126 126 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F5F5F5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   object-fit: cover;
 }
@@ -848,6 +936,26 @@ video {
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-\[5px\] {
@@ -880,6 +988,10 @@ video {
 
 .pl-1 {
   padding-left: 0.25rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .text-center {
