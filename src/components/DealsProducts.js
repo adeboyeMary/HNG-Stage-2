@@ -37,6 +37,10 @@ const DealsOfTheDayProducts = ({items}) => {
                                     <p>{item.sale}</p>
                                     <p>{item.rating}</p>
                                 </div>
+                                <div className=' ml-4'>
+                                    <button className='bg-[#FF2A63] text-white px-[35px] py-[3px] rounded-md 
+                                    hover:bg-[#E52659] '>Add to cart</button>
+                                </div>
                             </li>        
                             </Card>
                         </Link>

@@ -15,23 +15,25 @@ const FlashSale = () => {
                 </div>
 
                 <div className='ml-5'>
-                    <p>Apple watch Ultra</p>
-                    <p>Meet the most rugged and capable Apple Watch ever created ... </p>
-                    <div className="flex flex-row my-3 justify-between">
-                        <p>#376,000</p>
-                        <p className='discount'>#400,000</p>
-                    </div>
+                    <div className='bg-white p-4'>
+                        <p>Apple watch Ultra</p>
+                        <p>Meet the most rugged and capable Apple Watch ever created ... </p>
+                        <div className="flex flex-row my-3 justify-between">
+                            <p>#376,000</p>
+                            <p className='discount'>#400,000</p>
+                        </div>
 
-                    <div className='flex flex-row text-black'>
-                        <span className='bg-[#E6E6E6] py-[3px] px-[7px] lg:py-[3px] lg:px-[5px] rounded-sm '>Watches</span>
-                        <span className='ml-3 bg-[#E6E6E6] py-[2px] px-[5px] rounded-sm '>Official store</span>
-                    </div>
+                        <div className='flex flex-row text-black'>
+                            <span className='bg-[#E6E6E6] py-[3px] px-[7px] lg:py-[3px] lg:px-[5px] rounded-sm '>Watches</span>
+                            <span className='ml-3 bg-[#E6E6E6] py-[2px] px-[5px] rounded-sm '>Official store</span>
+                        </div>
 
-                    <div className='flex flex-row justify-between'>
-                        <p>7832 sold</p>
-                        <div className='flex flex-row'>
-                            <img src={star} alt='star' />
-                            <p>4.5</p>      
+                        <div     className='flex flex-row justify-between'>
+                            <p>7832 sold</p>
+                            <div className='flex flex-row'>
+                                <img src={star} alt='star' />
+                                <p>4.5</p>      
+                            </div>
                         </div>
                     </div>
                 </div>

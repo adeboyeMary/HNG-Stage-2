@@ -7,7 +7,10 @@ import BestDeal from './BestDealPoster';
 import DealsOfTheDayProducts from './DealsProducts';
 import { DUMMY_PRODUCTS } from '../constant/Dummy-Products';
 import { DUMMY_DEALS } from '../constant/Dummy_deals';
+import { DUMMY_STORES } from '../constant/Dummy-stores';
 import FlashSale from './Flashsale';
+import OfficialStores from './OfficialStores';
+
 
 
 const ProductList = () => {
@@ -15,8 +18,8 @@ const ProductList = () => {
     return (
         <div className='bg-[#F5F5F5] relative pt-2.5 lg:relative lg:mt-[5.4rem]'>
             <div className='flex flex-column lg:flex-row lg:w-[89.58%] lg:m-auto'>
-                <ul className='hidden lg:block lg:w-40 lg:bg-[#ffffff] lg:border-[#E6E6E6] 
-                lg:h-[337px] lg:p-3 lg:border-[1px] lg:mt-2 lg:rounded-sm lg:ml-3 '>
+                <ul className='hidden lg:block lg:w-56 lg:bg-[#ffffff] lg:border-[#E6E6E6] 
+                lg:h-[337px] lg:p-3 lg:border-[1px] lg:mt-2 lg:rounded-sm '>
                     <li>Electronics</li>
                     <li>Telecommunication</li>
                     <li>Food</li>
@@ -43,6 +46,7 @@ const ProductList = () => {
             <BestDeal /> 
             <FlashSale />
             <BestDeal />
+            <OfficialStores items={DUMMY_STORES} />
         </div>
     )
 };

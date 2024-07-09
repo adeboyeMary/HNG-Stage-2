@@ -16,3 +16,6 @@ code {
 .discount {
   text-decoration: line-through;
 }
+.products {
+  position: relative;
+}
