@@ -11,7 +11,7 @@ import divider from '../asset/svg/divider.svg';
 const MainHeader = () => {
     return ( 
         <header className=' bg-white text-sm w-[100%] fixed mb-2 top-0 z-10 h-[96px]
-        lg:w-[100%] lg:bg-white lg:fixed lg:top-0 lg:z-10 p-2'>
+        lg:w-[100%] lg:h-[97px] lg:bg-white lg:fixed lg:top-0 lg:z-10 p-2'>
             <div className='hidden lg:block lg:px-[10px] '>
                 <div className="flex lg:flex-row lg:justify-between ">
                     <span className='hidden lg:block' >Good afternoon customer!</span>

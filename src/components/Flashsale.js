@@ -10,8 +10,8 @@ const FlashSale = () => {
             <hr className='border-1 border-[#EDEDED] mt-1 mb-2 ml-2' />
 
             <div className='flex flex-row  lg:m-auto lg:my-3 '>
-                <div className='bg-[#E6E6E6] w-[400px] h-[242px] mt-[11px] lg:h-[280px] rounded-lg'>
-                    <img src={image6} alt='wristwatch' className='mt-[4rem] lg:mt-[1.7rem]' /> 
+                <div className='bg-[#E6E6E6] w-[400px] h-[242px] mt-[11px] md:h-[362px] lg:h-[280px] rounded-lg'>
+                    <img src={image6} alt='wristwatch' className='mt-[2rem] md:mt-[1rem] lg:mt-[1.7rem]' /> 
                 </div>
 
                 <div className='ml-5'>

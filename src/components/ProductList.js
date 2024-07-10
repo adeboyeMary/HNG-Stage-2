@@ -27,27 +27,27 @@ import store from '../asset/svg/store.svg';
 const ProductList = () => {
 
     return (
-        <div className='bg-[#F5F5F5] relative pt-2.5 lg:relative lg:mt-[5.4rem]'>
+        <div className='bg-[#F5F5F5] relative pt-2.5 lg:relative lg:mt-[6.4rem]'>
             <div className='flex flex-column lg:flex-row lg:w-[89.58%] lg:m-auto'>
                 <ul className='hidden lg:block lg:w-56 lg:bg-[#ffffff] lg:border-[#E6E6E6] 
-                lg:h-[337px] lg:p-3 lg:border-[1px] lg:mt-2 lg:rounded-sm lg:text-sm lg:px-[3px]'>
-                    <li className='flex flex-row mb-[10px]'><img src={electronic} alt='electronic' /> Electronics</li>
-                    <li className='flex flex-row mb-[10px]'><img src={telecoms} alt='telecoms' />Telecommunication</li>
-                    <li className='flex flex-row mb-[10px]'><img src={food} alt='food'/>Food</li>
-                    <li className='flex flex-row mb-[10px]'><img src={sport} alt='sport'/>Sports</li>
-                    <li className='flex flex-row mb-[10px]'><img src={finance} alt='finance'/>Finances</li>
-                    <li className='flex flex-row mb-[10px]'><img src={photo} alt='photography'/>Photography</li>
-                    <li className='flex flex-row mb-[10px]'><img src={business} alt='business'/>Business</li>
-                    <li className='flex flex-row mb-[10px]'><img src={health} alt='health' />Health</li>
-                    <li className='flex flex-row mb-[10px]'><img src={travel} alt='travel'/>travel</li>
-                    <li className='flex flex-row mb-[10px]'><img src={store} alt='store'/>Stores</li>
+                lg:h-[337px] lg:p-3 lg:border-[1px] lg:mt-2 lg:rounded-sm lg:pl-[6px] lg:px-[3px] lg:text-xs'>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={electronic} alt='electronic' /> Electronics</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={telecoms} alt='telecoms' />Telecommunication</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={food} alt='food'/>Food</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={sport} alt='sport'/>Sports</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={finance} alt='finance'/>Finances</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={photo} alt='photography'/>Photography</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={business} alt='business'/>Business</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={health} alt='health' />Health</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={travel} alt='travel'/> Travel</li>
+                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold'><img src={store} alt='store'/>Stores</li>
                     {/* <li className='flex flex-row'><img src={} alt=''/>Official stores</li> */}
                 </ul>
 
-                <div className='w-[94.67%] m-auto relative mt-[86px] lg:mt-0'>
+                <div className='w-[94.67%] lg:ml-2  m-auto relative mt-[86px] lg:mt-0'>
                     <img src={pagePoster} alt='pagePoster' className='rounded-[6px] lg:block' />
                 </div>
-                <div className='hidden lg:block lg:mt-2'>
+                <div className='hidden lg:block  lg:mt-2'>
                     <img src={half} alt='flashSalePoster' />
                 </div>
             </div>  

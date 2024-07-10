@@ -9,7 +9,7 @@ import icon2 from '../asset/svg/icon2.svg';
 const Footer = () => {
     return (
         <div className='mt-16 text-xs'>
-            <div className='flex flex-col lg:flex lg:flex-row gap-9 justify-center text-center'>
+            <div className='flex flex-col lg:flex lg:flex-row lg:gap-9 justify-center text-center'>
                 <div className='flex flex-row justify-center text-center mt-3 lg:flex 
                 lg:flex-row gap-[6.25rem] lg:gap-9 lg:mt-0'>
                     <div className='flex flex-col'>
@@ -31,9 +31,9 @@ const Footer = () => {
                 </div>
 
                 <div className='flex flex-row justify-center mr-4 text-center lg:flex lg:flex-row 
-                gap-[6.25rem] lg:gap-9 '>
+                gap-[5.25rem] lg:gap-9 '>
                     <div className='flex flex-col'>
-                    <h2 className='text-black text-base mb-4'>Photography</h2>
+                    <h2 className='text-black text-base mb-4  lg:mr-0'>Photography</h2>
                     <p className='mb-3 hover:text-[#E52659] hover:font-bold'>Camera</p>
                     <p className='mb-3 hover:text-[#E52659] hover:font-bold'>Lenses</p>
                     <p className='mb-3 hover:text-[#E52659] hover:font-bold'>Lighting</p>
@@ -95,21 +95,21 @@ const Footer = () => {
                 
             <footer>
                 <div className="flex flex-row justify-center my-10">
-                    <span><img src={ig} alt="ig" className='ml-[20px]' /></span>
-                    <span><img src={x} alt="x" className='mt-[4px] ml-[20px]' /></span>
-                    <span><img src={icon} alt="icon" className='ml-[20px]' /></span>
-                    <span><img src={icon5} alt="icon5" className='ml-[20px]' /></span>
-                    <span><img src={icon2} alt="icon2" className='ml-[20px]' /></span>
+                    <span><img src={ig} alt="ig" className='ml-[20px] lg:w-[44%]' /></span>
+                    <span><img src={x} alt="x" className='mt-[4px] ml-[20px] lg:w-[44%]' /></span>
+                    <span><img src={icon} alt="icon" className='ml-[20px] lg:w-[44%]' /></span>
+                    <span><img src={icon5} alt="icon5" className='ml-[20px] lg:w-[44%]' /></span>
+                    <span><img src={icon2} alt="icon2" className='ml-[20px] lg:w-[44%]' /></span>
                 </div>
 
-                <div className="flex flex-row justify-center mt-8 mb-5">
-                    <span className='ml-16 hover:text-[#E52659] hover:font-bold'>Privacy Policy</span>
-                    <span className='ml-16 hover:text-[#E52659] hover:font-bold'>FAQs</span>
-                    <span className='ml-16 hover:text-[#E52659] hover:font-bold'>Term of use</span>
+                <div className="flex flex-row justify-center space-between mt-8 lg:mt-3 mb-3">
+                    <span className='lg:ml-16 hover:text-[#E52659] hover:font-bold'>Privacy Policy</span>
+                    <span className='lg:ml-16 hover:text-[#E52659] hover:font-bold'>FAQs</span>
+                    <span className='lg:ml-16 hover:text-[#E52659] hover:font-bold'>Term of use</span>
                 </div>
 
                 <div  className='text-center mb-5 lg:ml-[4rem]'>
-                    <span>Sonjinwoostores&copy; 2020 - 2023, All Rghts Reserved</span></div>
+                    <span>Sonjinwoostores&copy; 2020 - 2023, All Rights Reserved</span></div>
             </footer>
         </div>
     )
