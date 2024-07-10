@@ -19,7 +19,7 @@ const DealsOfTheDayProducts = ({items}) => {
                         <Link to='/checkout' className='hover:bg-[]'>
                             <Card>
                             <li key={item.id} className="text-[12px]" >
-                                <div className="bg-[#F5F5F5] m-auto pt-3 pb-3 w-[195px] lg:w-[128px] h-[133px] rounded-lg">
+                                <div className="bg-[#F5F5F5] m-auto pt-3 pb-3  lg:w-[128px] h-[133px] rounded-lg">
                                     <img alt={item.name} src={item.image} className="m-auto" />
                                 </div>
                                 
@@ -38,7 +38,7 @@ const DealsOfTheDayProducts = ({items}) => {
                                     <p>{item.sale}</p>
                                     <p className='flex flex-row'><img src={star} alt='star' />{item.rating}</p>
                                 </div>
-                                <div className=' ml-4'>
+                                <div className=' ml-4 lg:ml-0'>
                                     <button className='bg-[#FF2A63] text-white px-[35px] py-[3px] rounded-md 
                                     hover:bg-[#E52659] '>Add to cart</button>
                                 </div>

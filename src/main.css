@@ -1307,6 +1307,10 @@ video {
     margin-top: 6.4rem;
   }
 
+  .lg\:ml-0 {
+    margin-left: 0px;
+  }
+
   .lg\:block {
     display: block;
   }
