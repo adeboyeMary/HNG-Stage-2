@@ -4,17 +4,19 @@ import wristwatch from '../asset/png/wristwatch.png';
 
 const CartProducts = () => {
     return (
-        <div className="products flex flex-col text-black text-lg lg:flex lg:flex-row m-auto 
+        <div className="products flex flex-col text-black text-xs lg:flex lg:flex-row m-auto 
         lg:w-[63.49%] p-2">
             <div className='flex flex-col '>
                 <div className="flex flex-row  bg-white border-[1px] border-[#EDEDED] 
-                mb-[10px] rounded-md p-3">
-                    <div>
+                    mb-[10px] rounded-md p-3">
+
+                    <div className='bg-[#E6E6E6] w-[91px] p-[8px] rounded-md'>
                         <img src={wristwatch} alt="wristwatch"/>
                     </div>
-                    <div>
+
+                    <div className='ml-[8px]'>
                         <div className="flex flex-row justify-between">
-                            <p  >Apple watch ultra</p>
+                            <p className='text-sm mb-[12px]'>Apple watch ultra</p>
                             <p className='ml-[44px]'>#376,000</p>
                         </div>
 
@@ -26,7 +28,7 @@ const CartProducts = () => {
                                 <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E]
                                 hover:bg-[#E52659] hover:border-[#E52659]  hover:text-white'>-</button>
-                                <p className='hover:text-[#E52659]'>1</p>
+                                <p className=' text-lg '>1</p>
                                 <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E]
                                 hover:bg-[#E52659] hover:border-[#E52659]  hover:text-white'>+</button>
@@ -37,12 +39,12 @@ const CartProducts = () => {
 
                 <div className="flex flex-row  bg-white border-[1px] border-[#EDEDED] 
                 mb-[10px] rounded-md p-3">
-                    <div>
+                    <div className='bg-[#E6E6E6] w-[91px] p-[8px] rounded-md'>
                         <img src={wristwatch} alt="wristwatch"/>
                     </div>
-                    <div>
+                    <div className='ml-[8px]'>
                         <div className="flex flex-row justify-between">
-                            <p>Apple watch ultra</p>
+                            <p className='text-sm mb-[12px]'>Apple watch ultra</p>
                             <p className='ml-[44px]'>#376,000</p>
                         </div>
 
@@ -54,7 +56,7 @@ const CartProducts = () => {
                                 <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E]
                                 hover:bg-[#E52659] hover:border-[#E52659]  hover:text-white'>-</button>
-                                <span>1</span>
+                                <span className='text-lg'>1</span>
                                 <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E]
                                 hover:bg-[#E52659] hover:border-[#E52659]  hover:text-white'>+</button>
@@ -65,16 +67,16 @@ const CartProducts = () => {
 
                 <div className="flex flex-row bg-white border-[1px] border-[#EDEDED] 
                 mb-[10px] rounded-md p-3">
-                    <div>
+                    <div className='bg-[#E6E6E6] w-[91px] p-[8px] rounded-md'>
                         <img src={wristwatch} alt="wristwatch"/>
                     </div>
-                    <div>
+                    <div className='ml-[8px]'>
                         <div className="flex flex-row justify-between">
-                            <p>Apple watch ultra</p>
+                            <p className='text-sm mb-[12px]'>Apple watch ultra</p>
                             <p className='ml-[44px]'>#376,000</p>
                         </div>
 
-                        <span className='bg-[#E6E6E6] py-[3px] px-[7px] lg:py-[3px] 
+                        <span className='bg-[#E6E6E6] py-[3px] lg:mt-3 px-[7px] lg:py-[3px] 
                         lg:px-[5px] rounded-sm '>Watches</span>
                         <div className='flex flex-row justify-between'>
                             <span className='mt-2 bg-[#E6E6E6] py-[2px] px-[5px] rounded-sm '>Official store</span>
@@ -82,7 +84,7 @@ const CartProducts = () => {
                                 <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E]
                                 hover:bg-[#E52659] hover:border-[#E52659]  hover:text-white'>-</button>
-                                <span>1</span>
+                                <span className='text-lg'>1</span>
                                 <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E] 
                                 hover:bg-[#E52659] hover:border-[#E52659] hover:text-white'>+</button>
@@ -108,7 +110,7 @@ const CartProducts = () => {
                     <p>#1,511,500</p>
                 </div>
                 <Link to='/'>
-                <button className='bg-[#FF2A63] text-white px-[75px] py-[3px] 
+                <button className='bg-[#FF2A63] text-white px-[75px] py-[3px] ml-[27px] mt-[21px] 
                 m-4 rounded-md hover:bg-[#E52659] '>Proceed to checkout</button>
                 </Link>
                 

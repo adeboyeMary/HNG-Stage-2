@@ -5,6 +5,7 @@ import cart from '../asset/svg/cart.svg';
 import smiley from '../asset/svg/smiley.svg';
 import SearchBar from './SearchBar';
 import Sidebar from './Sidebar';
+import divider from '../asset/svg/divider.svg';
 
 
 const MainHeader = () => {
@@ -21,22 +22,24 @@ const MainHeader = () => {
                     </div>
                 </div>
 
-                <div className='flex  lg:flex-row justify-between mt-4'>
-                <h1 className="text-[#FF2A63] font-bold hidden lg:block lg:text-2xl mt-4 ">Sonjinwoo</h1>
+                <div className='flex  lg:flex-row justify-between mt-4 px-[2rem]'>
+                    <h1 className="text-[#FF2A63] font-bold hidden lg:block lg:text-2xl lg:ml-[5rem] mt-4 ">Sonjinwoo</h1>
 
-                <>
-                    <SearchBar />
-                </>
+                    <>
+                        <SearchBar />
+                    </>
+
+                    <span className='lg:flex lg:flex-row hidden'>
+                        <img alt='smileyIcon' src={smiley} className='lg:hover:text-[#E52659]' />
+                        <p className='mt-3 lg:hover:text-[#E52659] hover:font-bold'>Account</p>
+                    </span>
+
+                    <img src={divider} alt='divider' className='mx-2 h-[1px]' />
                 
-                <span className='lg:flex lg:flex-row hidden'>
-                    <img alt='smileyIcon' src={smiley} />
-                    <p className='mt-3 lg:hover:text-[#E52659] hover:font-bold'>Account</p>
-                </span>
-                
-                <Link to='/checkout' className='hidden lg:flex lg:flex-row lg:hover:text-[#E52659]' >
-                    <img alt='cartIcon' src={cart} className='m-2 '/>
-                    <p className='mt-3 lg:hover:text-[#E52659] hover:font-bold'>Cart</p>
-                </Link>
+                    <Link to='/checkout' className='hidden lg:flex lg:flex-row lg:hover:text-[#E52659]' >
+                        <img alt='cartIcon' src={cart} className='m-2 '/>
+                        <p className='mt-3 text-[#FF2A63] lg:hover:text-[#E52659] hover:font-bold'>Cart</p>
+                    </Link>
                 </div>
             </div>
             {/* bg-white w-100% mb-5 */}

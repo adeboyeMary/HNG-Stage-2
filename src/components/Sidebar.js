@@ -6,23 +6,28 @@ import divider from '../asset/svg/divider.svg';
 import cart from '../asset/svg/cart.svg';
 import smiley from '../asset/svg/smiley.svg';
 import SearchBar from './SearchBar';
+import electronic from '../asset/svg/electronic.svg';
+import telecoms from '../asset/svg/telecoms.svg';
+import food from '../asset/svg/food.svg';
+import sport from '../asset/svg/sport.svg';
+import finance from '../asset/svg/finance.svg';
+import photo from '../asset/svg/photo.svg';
+import business from '../asset/svg/business.svg';
+import health from '../asset/svg/health.svg';
+import travel from '../asset/svg/travel.svg';
+import store from '../asset/svg/store.svg';
 
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     const onClickHandler = () => {
         setIsOpen(!isOpen);
-    };
-    const searchHandler = () => {
-        setIsSearchOpen(!isSearchOpen);
     };
 
 
     return (
         <>
-        {/* className='lg:hidden bg-white flex flex-row w-[100%] justify-between' */}
             <div >
                 <div className='m-auto'>
                     <div className='flex flex-row justify-between m-auto w-[94.67%]'>
@@ -37,31 +42,22 @@ const Sidebar = () => {
                     </div>
                     <SearchBar />
                 </div>
-
-                {/* <div className={`lg-hidden flex flex-row w-[94.67%] m-auto h-[34px] bg-[#EDEDED] rounded-md
-                    S{isSearchOpen ? 'block' : 'hidden' }`}> 
-                    <img src={search} alt="searchIcon" className="bg-transparent w-[45.5px]"></img>
-                    <img alt='dividerIcon' src={divider} className='bg-[#EDEDED] m-2 '/>
-                    <input className="bg-[#EDEDED] w-[289.5px] p-2 text-[14px] " 
-                    type="text" placeholder='At first there was nothing...' />
-                </div> */}
-                
                 
                 <div className={`lg:hidden fixed top-0 left-0 bg-[#ffffff] p-4 z-50 transform 
                 ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform`}>
                     <button onClick={onClickHandler} className='text-5xl text-[#FF2A63]'> &times; </button>
 
                     <ul className=''>
-                        <li>Electronics</li>
-                        <li>Telecommunication</li>
-                        <li>Food</li>
-                        <li>Sports</li>
-                        <li>Finances</li>
-                        <li>Photography</li>
-                        <li>Business</li>
-                        <li>Health</li>
-                        <li>Travel</li>
-                        <li>Official stores</li>
+                    <li className='flex flex-row mb-[10px]'><img src={electronic} alt='electronic' /> Electronics</li>
+                    <li className='flex flex-row mb-[10px]'><img src={telecoms} alt='telecoms' />Telecommunication</li>
+                    <li className='flex flex-row mb-[10px]'><img src={food} alt='food'/>Food</li>
+                    <li className='flex flex-row mb-[10px]'><img src={sport} alt='sport'/>Sports</li>
+                    <li className='flex flex-row mb-[10px]'><img src={finance} alt='finance'/>Finances</li>
+                    <li className='flex flex-row mb-[10px]'><img src={photo} alt='photography'/>Photography</li>
+                    <li className='flex flex-row mb-[10px]'><img src={business} alt='business'/>Business</li>
+                    <li className='flex flex-row mb-[10px]'><img src={health} alt='health' />Health</li>
+                    <li className='flex flex-row mb-[10px]'><img src={travel} alt='travel'/>travel</li>
+                    <li className='flex flex-row mb-[10px]'><img src={store} alt='store'/>Stores</li>
                     </ul>
                 </div>
 
