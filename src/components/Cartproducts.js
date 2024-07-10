@@ -1,8 +1,19 @@
 import { Link } from 'react-router-dom';
 
 import wristwatch from '../asset/png/wristwatch.png';
+import { useState } from 'react';
 
 const CartProducts = () => {
+    const [count, setCount] = useState(1);
+
+    const increaseProductHandler = () => {
+        setCount(count + 1);
+    };
+    const decreaseProductHandler = () => {
+        setCount(count - 1);
+    };
+
+
     return (
         <div className="products flex flex-col text-black text-xs lg:flex lg:flex-row m-auto 
         lg:w-[63.49%] p-2">
@@ -25,11 +36,11 @@ const CartProducts = () => {
                         <div className='flex flex-row justify-between'>
                             <span className='mt-2 bg-[#E6E6E6] py-[2px] px-[5px] rounded-sm '>Official store</span>
                             <div className='flex flex-row space-x-2 text-[#807E7E] mt-[9px]'>
-                                <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
+                                <button onClick={decreaseProductHandler} className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E]
                                 hover:bg-[#E52659] hover:border-[#E52659]  hover:text-white'>-</button>
-                                <p className=' text-lg '>1</p>
-                                <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
+                                <p className=' text-lg '>{count}</p>
+                                <button onClick={increaseProductHandler} className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E]
                                 hover:bg-[#E52659] hover:border-[#E52659]  hover:text-white'>+</button>
                             </div>
@@ -80,7 +91,7 @@ const CartProducts = () => {
                         lg:px-[5px] rounded-sm '>Watches</span>
                         <div className='flex flex-row justify-between'>
                             <span className='mt-2 bg-[#E6E6E6] py-[2px] px-[5px] rounded-sm '>Official store</span>
-                            <div className='flex flex-row space-x-2 text-[#807E7E] mt-[9px] hover:text-white'>
+                            <div className='flex flex-row space-x-2 text-[#807E7E] mt-[9px] '>
                                 <button className='w-6 h-6 bg-transparent rounded-full flex items-center 
                                 justify-center border-[1px] text-[#807E7E] border-[#807E7E]
                                 hover:bg-[#E52659] hover:border-[#E52659]  hover:text-white'>-</button>

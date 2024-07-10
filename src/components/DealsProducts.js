@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import HorizontalScroller from "./HorizontalScroller";
 import Card from "./ui/Card";
+import star from '../asset/svg/star.svg';
 
 
 const DealsOfTheDayProducts = ({items}) => {
@@ -18,7 +19,7 @@ const DealsOfTheDayProducts = ({items}) => {
                         <Link to='/checkout' className='hover:bg-[]'>
                             <Card>
                             <li key={item.id} className="text-[12px]" >
-                                <div className="bg-[#F5F5F5] m-auto pt-3 pb-3 w-[187spx] lg:w-[128px] h-[133px] rounded-lg">
+                                <div className="bg-[#F5F5F5] m-auto pt-3 pb-3 w-[195px] lg:w-[128px] h-[133px] rounded-lg">
                                     <img alt={item.name} src={item.image} className="m-auto" />
                                 </div>
                                 
@@ -26,16 +27,16 @@ const DealsOfTheDayProducts = ({items}) => {
                                 <p className="leading-3 mt-3">{item.description}</p>
                                 <div className="flex flex-row my-3 justify-between">
                                     <p>{item.price}</p>
-                                    <p className='discount '>{item.discount}</p>
+                                    <p className='discount text-color-[#FF2A63] '>{item.discount}</p>
                                 </div>
-
+{/* 
                                 <div className='flex flex-col lg:flex lg:flex-row text-center text-black'>
                                     <span className='bg-[#E6E6E6] py-[3px] px-[7px] lg:py-[px] lg:px-[5px] rounded-sm '>Watches</span>
                                     <span className='ml-3 bg-[#E6E6E6] py-[2px] px-[5px] mt-2 lg:mt-0 rounded-sm '>Official store</span>
-                                </div>
+                                </div> */}
                                 <div className="flex flex-row my-3 justify-between">
                                     <p>{item.sale}</p>
-                                    <p>{item.rating}</p>
+                                    <p className='flex flex-row'><img src={star} alt='star' />{item.rating}</p>
                                 </div>
                                 <div className=' ml-4'>
                                     <button className='bg-[#FF2A63] text-white px-[35px] py-[3px] rounded-md 
