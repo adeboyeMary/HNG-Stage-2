@@ -60,6 +60,16 @@ const ProductList = () => {
             <img src={full} alt='flashSalePoster' className='w-[94.67%] m-auto rounded-xl 
             my-3.5 lg:hidden' />
             <OfficialStores items={DUMMY_STORES} />
+            <div className='flex flex-col lg:flex lg:flex-row lg:ml-[5rem] lg:mt-[1.3rem]'>
+                <div className='mt-[2rem] m-auto  lg:mt-0 '>
+                    <p className='text-black lg:mb-[0.3rem] text-center'>Now its easier to open your shop</p>
+                    <p className='text-xs'>With simple step by step and easy help instruction to follow</p>
+                </div>
+                <div className='m-auto mt-[1.5rem] lg:ml-[3rem]'>
+                    <button className=' bg-[#FF2A63] text-white hover:bg-[#E52659] 
+                    hover:font-bold px-[5rem] py-[0.3rem] rounded-lg'>Create account</button>
+                </div>
+            </div>
         </div>
     )
 };
