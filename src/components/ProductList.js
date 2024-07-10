@@ -32,7 +32,7 @@ const ProductList = () => {
                     <li>Official stores</li>
                 </ul>
 
-                <div className='w-[94.67%] m-auto'>
+                <div className='w-[94.67%] m-auto relative mt-[34px] lg:mt-0'>
                     <img src={pagePoster} alt='pagePoster' className='rounded-[6px] lg:block' />
                 </div>
                 <div className='hidden lg:block lg:mt-2'>

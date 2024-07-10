@@ -15,9 +15,9 @@ const MainHeader = () => {
                 <div className="flex lg:flex-row lg:justify-between ">
                     <span className='hidden lg:block' >Good afternoon customer!</span>
                     <div className='lg:flex lg:flex-row lg:ml-2'>
-                        <span className="hover:text-[#FF2A63] hover:font-bold hidden lg:block lg:ml-3" >Sell on SamandCart</span>
-                        <span className="hover:text-[#FF2A63] hover:font-bold  hidden lg:block lg:ml-3" >Track your Order</span>
-                        <span className="hover:text-[#FF2A63] hover:font-bold hidden lg:block lg:ml-3" >Help</span>
+                        <span className="hover:text-[#E52659] hover:font-bold hidden lg:block lg:ml-3" >Sell on SamandCart</span>
+                        <span className="hover:text-[#E52659] hover:font-bold  hidden lg:block lg:ml-3" >Track your Order</span>
+                        <span className="hover:text-[#E52659] hover:font-bold hidden lg:block lg:ml-3" >Help</span>
                     </div>
                 </div>
 

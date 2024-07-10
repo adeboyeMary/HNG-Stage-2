@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 import DealsOfTheDayProducts from "./DealsProducts";
 import { DUMMY_DEALS } from "../constant/Dummy_deals";

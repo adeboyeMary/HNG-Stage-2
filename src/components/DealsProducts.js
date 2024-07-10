@@ -29,9 +29,9 @@ const DealsOfTheDayProducts = ({items}) => {
                                     <p className='discount '>{item.discount}</p>
                                 </div>
 
-                                <div className='flex flex-row text-black'>
-                                    <span className='bg-[#E6E6E6] py-[3px] px-[7px] lg:py-[3px] lg:px-[5px] rounded-sm '>Watches</span>
-                                    <span className='ml-3 bg-[#E6E6E6] py-[2px] px-[5px] rounded-sm '>Official store</span>
+                                <div className='flex flex-col lg:flex lg:flex-row text-center text-black'>
+                                    <span className='bg-[#E6E6E6] py-[3px] px-[7px] lg:py-[px] lg:px-[5px] rounded-sm '>Watches</span>
+                                    <span className='ml-3 bg-[#E6E6E6] py-[2px] px-[5px] mt-2 lg:mt-0 rounded-sm '>Official store</span>
                                 </div>
                                 <div className="flex flex-row my-3 justify-between">
                                     <p>{item.sale}</p>

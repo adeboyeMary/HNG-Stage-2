@@ -1,4 +1,5 @@
 import HorizontalScroller from "./HorizontalScroller";
+import Card from "./ui/Card";
 
 const OfficialStores = ({items}) => {
     return (
@@ -9,10 +10,12 @@ const OfficialStores = ({items}) => {
             <HorizontalScroller>
                 <ul className="flex flex-row">
                     {items.map((item) => (
-                        <li className="ml-4">
-                            <img src={item.image} alt={item.name} />
-                            <p>{item.name} </p>
+                        <Card>
+                        <li className="ml-4 w-[98px]">
+                            <img src={item.image} alt={item.name} className="ml-[-5px]" />
+                            <p className="text-center mt-[1px]">{item.name} </p>
                         </li>
+                        </Card>
                     ))}
                 </ul>
             </HorizontalScroller>

@@ -5,13 +5,13 @@ import star from '../asset/svg/star.svg';
 
 const FlashSale = () => {
     return (
-        <div className='bg-white w-[94.67%] lg:w-[89.58%] m-auto'>
+        <div className='bg-white w-[94.67%] lg:w-[89.58%] m-auto p-3'>
             <p className='pl-2 text-black '>Flash sale</p>
             <hr className='border-1 border-[#EDEDED] mt-1 mb-2 ml-2' />
 
             <div className='flex flex-row  lg:m-auto lg:my-3 '>
-                <div className='bg-[#E6E6E6] w-[400px] h-[355px]  rounded-lg'>
-                    <img src={image6} alt='wristwatch' className='mt-8' /> 
+                <div className='bg-[#E6E6E6] w-[400px] h-[242px] mt-[11px] rounded-lg'>
+                    <img src={image6} alt='wristwatch' className='mt-[4rem] lg:mt-[1.7rem]' /> 
                 </div>
 
                 <div className='ml-5'>
