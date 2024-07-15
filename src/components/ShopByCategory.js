@@ -12,7 +12,7 @@ const ShopByCategory = ({products}) => {
             <HorizontalScroller>
                 <ul className='bg-white w-[94-67%] text-black mr-2 flex flex-row  '>
                     {products.map((product) => (
-                            <Card>
+                            <Card key={product.id}>
                                 <li key={product.id} className='mr-2'>
                                     <div className='bg-[#F5F5F5] w-[82px] h-[82px] rounded-[54%] pt-1'>
                                         <img src={product.image} alt={product.name} className='m-auto rounded-[50%]' />

@@ -36,10 +36,12 @@ const ProductList = ({products}) => {
             <hr className='border-1 border-[#EDEDED] mt-1 mb-2 ml-2' />
 
             <HorizontalScroller>
-                <ul className='bg-white w-[94-67%] mr-2 flex flex-row whitespace-normal '>
-                    {products.map((product) => (
+            {/* bg-white w-[94-67%] mr-2 flex flex-row whitespace-normal  */}
+                <ul className='bg-white w-[94-67%] mr-2 flex flex-row whitespace-normal'>
+                    {products?.map((product) => (
                     <Card key={product.id}>
-                        <li key={product.id} className="text-[12px] w-[195px] h-[396px] " >
+                        <li key={product.id} className="text-[12px] w-[195px] h-[396px]  
+                         lg:m-0 lg:p-[10px] " >
                             <Link to={`/${product.id}`}>
                                 <div className="bg-[#F5F5F5] m-auto pt-3 pb-3  lg:w-[147px] h-[187px] 
                                     rounded-lg">
@@ -81,25 +83,12 @@ const ProductList = ({products}) => {
                                         </button>
                                     </div>
                                 </li>
-                                
                             </Card>
                             ))}
                         
             
             
-                    {/* <img src={full} alt='flashSalePoster' className='w-[94.67%] m-auto rounded-xl 
-                    my-3.5 lg:hidden' />
-                    <OfficialStores items={DUMMY_STORES} />
-                    <div className='flex flex-col lg:flex lg:flex-row lg:text-start lg:mt-[1.3rem]'>
-                    <div className='mt-[2rem] m-auto  lg:mt-0 '>
-                        <p className='text-black lg:mb-[0.3rem] text-center lg:text-start'>Now its easier to open your shop</p>
-                        <p className='text-xs'>With simple step by step and easy help instruction to follow</p>
-                    </div>
-                    <div className='m-auto mt-[1.5rem] lg:ml-[3rem]'>
-                        <button className=' bg-[#FF2A63] text-white hover:bg-[#E52659] 
-                        hover:font-bold px-[5rem] py-[0.3rem] rounded-lg'>Create account</button>
-                    </div>
-                    </div> */}
+                
                 </ul>
             </HorizontalScroller>
         </div>
