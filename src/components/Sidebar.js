@@ -40,7 +40,7 @@ const Sidebar = () => {
                         <Link to='/checkout' ><img alt='cartIcon' src={cart} className='m-2'></img></Link>
                     </div>
                     </div>
-                    <SearchBar />
+                    <SearchBar id='search2' name='search2' />
                 </div>
                 
                 <div className={`lg:hidden fixed top-0 left-0 bg-[#ffffff] p-4 z-50 transform 

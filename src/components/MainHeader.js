@@ -13,17 +13,19 @@ import help from '../asset/svg/help.svg';
 
 const MainHeader = () => {
     return ( 
-        <header className=' bg-white text-sm w-[100%] fixed mb-2 top-0 z-10 h-[96px]
-        lg:w-[100%] lg:h-[97px] lg:bg-white lg:fixed lg:top-0 lg:z-10 p-2'>
+        <header className=' bg-white text-sm w-[100%]  mb-2 top-0 z-10 h-[96px]
+        lg:w-[100%] lg:h-[97px] lg:bg-white  lg:top-0 lg:z-10 p-2'>
             <div className='hidden lg:block lg:px-[10px] '>
                 <div className="flex lg:flex-row lg:justify-between ">
-                    <span className='hidden lg:block' >Good afternoon customer!</span>
+                    <span className='hidden lg:block lg:text-[16px]' >Good afternoon customer!</span>
                     <div className='lg:flex lg:flex-row lg:ml-2'>
-                        <div className='lg:flex lg:flex-row'>
+                        <div className='lg:flex lg:flex-row lg:gap-[7px] lg:ml-[17px]'>
                             <img src={sell} alt='sell' />
                             <span className="hover:text-[#E52659] hover:font-bold hidden lg:block 
-                            lg:ml-3" >Sell on SamandCart</span>
+                            " >Sell on SamandCart</span>
                         </div>
+                        <img src={divider} alt='divider' className='lg:w-[2px] lg:h-[16px] lg:bg-[#807E7E]
+                        lg:ml-[3px]' />
                         <div className='lg:flex lg:flex-row lg:ml-3'>
                             <img src={track} alt='track' />
                             <span className="hover:text-[#E52659] 
@@ -42,7 +44,7 @@ const MainHeader = () => {
                     <h1 className="text-[#FF2A63] font-bold hidden lg:block lg:text-2xl lg:ml-[5rem] mt-4 ">Sonjinwoo</h1>
 
                     <>
-                        <SearchBar />
+                        <SearchBar id='search' name='search' />
                     </>
 
                     <span className='lg:flex lg:flex-row hidden'>

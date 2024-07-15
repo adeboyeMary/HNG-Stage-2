@@ -15,7 +15,7 @@ const DealsOfTheDayProducts = ({items}) => {
             {/* className='lg:hidden hover:bg-[#FF2A63]'> */}
             <HorizontalScroller>
                 <ul className='bg-white w-[94-67%] mr-2 flex flex-row whitespace-normal'>
-                    {items.map((item) => (
+                    {/* {items.map((item) => (
                         <Link to='/checkout' className='hover:bg-[]'>
                             <Card>
                             <li key={item.id} className="text-[12px]" >
@@ -29,11 +29,11 @@ const DealsOfTheDayProducts = ({items}) => {
                                     <p>{item.price}</p>
                                     <p className='discount text-color-[#FF2A63] '>{item.discount}</p>
                                 </div>
-{/* 
+
                                 <div className='flex flex-col lg:flex lg:flex-row text-center text-black'>
                                     <span className='bg-[#E6E6E6] py-[3px] px-[7px] lg:py-[px] lg:px-[5px] rounded-sm '>Watches</span>
                                     <span className='ml-3 bg-[#E6E6E6] py-[2px] px-[5px] mt-2 lg:mt-0 rounded-sm '>Official store</span>
-                                </div> */}
+                                </div>
                                 <div className="flex flex-row my-3 justify-between">
                                     <p>{item.sale}</p>
                                     <p className='flex flex-row'><img src={star} alt='star' />{item.rating}</p>
@@ -46,7 +46,7 @@ const DealsOfTheDayProducts = ({items}) => {
                             </Card>
                         </Link>
                    
-                    ))}
+                    ))} */}
                 </ul>
             </HorizontalScroller>
         </div>

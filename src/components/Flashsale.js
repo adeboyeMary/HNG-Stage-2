@@ -16,8 +16,8 @@ const FlashSale = () => {
 
                 <div className='ml-5'>
                     <div className='bg-white p-4'>
-                        <p>Apple watch Ultra</p>
-                        <p>Meet the most rugged and capable Apple Watch ever created ... </p>
+                        <p className='text-[24px] '>Apple watch Ultra</p>
+                        <p className='text-[20px] '>Meet the most rugged and capable Apple Watch ever created ... </p>
                         <div className="flex flex-row my-3 justify-between">
                             <p>#376,000</p>
                             <p className='discount'>#400,000</p>
