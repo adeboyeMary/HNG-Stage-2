@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { CartContextProvider } from './store/CartContext.js';
 
 import './main.css';
 import RootLayout from './pages/RootLayout';
@@ -42,9 +41,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <React.Fragment>
-      <CartContextProvider>
         <RouterProvider router={router} />
-      </CartContextProvider>
     </React.Fragment>
   );
 }

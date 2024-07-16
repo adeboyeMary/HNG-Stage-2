@@ -1,12 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-// import { Link } from 'react-router-dom';
 import { cartActions } from '../store/cart-slice';
 
-// import CartItem from "./CartItem";
 import delivery from '../asset/svg/delivery.svg';
 import visa from '../asset/svg/visa.svg';
 import { Link } from 'react-router-dom';
-// import ProductList from './ProductList';
+
 
 const Cart = () => {
     const cartItems = useSelector((state) => state.cart.cartItems)
@@ -89,7 +87,7 @@ const Cart = () => {
                             </div>
                             <div className='ml-[15rem] '>
                                 <p>#{cartItem.price}</p>
-                                <p className='mt-[2rem]'>#{cartItem.total}</p>
+                                <p className='mt-[2rem]'>#{cartItem.price}</p>
                             </div>
                         </div>
 

@@ -1,4 +1,4 @@
-import { json, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 
 import ProductList from "../components/ProductList";
@@ -42,13 +42,14 @@ export async function loader () {
     
     const apiURL = 
         `/api/products?organization_id=${orgsId}&reverse_sort=false&page=1&size=10&Appid=${appId}&Apikey=${apiKey}`;
+        
     // const apiURL = `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=
     // ${orgsId}&reverse_sort=false&page=1&size=10&Appid=${appId}&apikey=${apiKey}`;
 
     const response = await fetch(apiURL);
 
     if (!response.ok){
-        throw json({message: 'Could not fetch products'}, {status: 505});
+        throw new Error('Could not fetch products');
     }
     const data = await response.json();
     return data;

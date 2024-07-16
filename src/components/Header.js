@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 import cart from '../asset/svg/cart.svg';
 import smiley from '../asset/svg/smiley.svg';
 import SearchBar from './SearchBar';
