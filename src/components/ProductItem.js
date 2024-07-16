@@ -79,7 +79,7 @@ const ProductItem = ({product}) => {
                 </div>
                 <div className='flex flex-row'>
                     <img src={love} alt='love' />
-                    <Link t0='/cart'>
+                    <Link to='/'>
                     <button onClick={() => addToCartHandler2(product)} className='bg-[#FF2A63] text-white px-[6rem] py-[0.2rem] lg:mt-2 rounded-md 
                     hover:bg-[#E52659] '>Add to cart</button>
                     </Link>

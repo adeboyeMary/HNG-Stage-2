@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './main.css';
 import RootLayout from './pages/RootLayout';
-import Product, {loader as productLoader } from './pages/Product';
+import Product from './pages/Product';
 import Checkout from './pages/Checkout';
 import OrderSuccessful from './pages/OrderSuccessful';
 import ProductDetails, { loader as productDetailsLoader } from './pages/ProductDetails';
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Product />,
-        loader: productLoader
+        // loader: productLoader
       },
       {
         path: 'checkout',
