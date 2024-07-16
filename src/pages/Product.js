@@ -40,11 +40,11 @@ export async function loader () {
     const appId = process.env.REACT_APP_ID;
     const apiKey = process.env.REACT_APP_API_KEY
     
-    const apiURL = 
-        `/api/products?organization_id=${orgsId}&reverse_sort=false&page=1&size=10&Appid=${appId}&Apikey=${apiKey}`;
+    // const apiURL = 
+    //     `/api/products?organization_id=${orgsId}&reverse_sort=false&page=1&size=10&Appid=${appId}&Apikey=${apiKey}`;
         
-    // const apiURL = `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=
-    // ${orgsId}&reverse_sort=false&page=1&size=10&Appid=${appId}&apikey=${apiKey}`;
+    const apiURL = 
+    `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${orgsId}&reverse_sort=false&page=1&size=10&Appid=${appId}&apikey=${apiKey}`;
 
     const response = await fetch(apiURL);
 
