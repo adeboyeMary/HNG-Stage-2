@@ -12,59 +12,76 @@ import OfficialStores from "../components/OfficialStores";
 
 
 const Product = () => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 10;
-    const [products, setProducts] = useState([]);
-    const [totalPages, setTotalPages] = useState(0);
-    const orgsId = process.env.REACT_APP_ORGS_ID;
-    const appId = process.env.REACT_APP_ID;
-    const apiKey = process.env.REACT_APP_API_KEY
+	const [currentPage, setCurrentPage] = useState(1);
+	const [products, setProducts] = useState([]);
+	const [totalPages, setTotalPages] = useState(0);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const apiUrl = 
-                `/api/products?organization_id=${orgsId}&reverse_sort=false&page=${currentPage}&size=${itemsPerPage}&Appid=${appId}&Apikey=${apiKey}`;
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-                setProducts(data.items);
-                setTotalPages(data.page);
-            } catch (error) {
-                throw new Error('Failed to fetch products');
-            }
-        };
-        fetchData();
-    }, [currentPage, itemsPerPage, orgsId, apiKey, appId ] );
+	const itemsPerPage = 10;
+	const orgsId = process.env.REACT_APP_ORGS_ID;
+	const appId = process.env.REACT_APP_ID;
+	const apiKey = process.env.REACT_APP_API_KEY;
+	const apiBaseURL = process.env.REACT_APP_API_BASE_URL;
 
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const currentProducts = products.slice(startIndex, endIndex);
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const Url = `${apiBaseURL}/products?organization_id=${orgsId}&reverse_sort=false&page=${currentPage}&size=${itemsPerPage}&Appid=${appId}&Apikey=${apiKey}`;
 
-    const pageChangeHandler = (newPage) => {
-        setCurrentPage(newPage);
-    };
-  
+				const response = await fetch(Url);
+				const data = await response.json();
+				setProducts(data.items);
+				console.log(data, "///////////////");
+				setTotalPages(data.total / data.size);
+			} catch (error) {
+				throw new Error("Failed to fetch products");
+			}
+		};
+		fetchData();
+	}, [currentPage, orgsId, apiKey, appId, apiBaseURL]);
 
-    return (
-        <div className='bg-[#F5F5F5] relative pt-2.5 lg:relative lg:mt-[6.4rem]'>
-            <SideBarLg />
-            <ShopByCategory products={DUMMY_PRODUCTS}  />
-            <BestDeal />
-            <ProductList products={currentProducts} />
-            <BestDeal /> 
-            <FlashSale />
-            <OfficialStores goods={DUMMY_STORES} />
+	// const startIndex = (currentPage - 1) * itemsPerPage;
+	// const endIndex = startIndex + itemsPerPage;
+	// const currentProducts = products?.slice(startIndex, endIndex);
 
-            <div className="ml-[5rem] ">
-                <button onClick={() => pageChangeHandler(currentPage - 1)} 
-                    disabled={currentPage === 1}
-                    className="bg-transparent text-[#FF2A63] border-[#FF2A63] ">Previous</button>
-                <button onClick={() => pageChangeHandler(currentPage + 1)} 
-                    disabled={currentPage === totalPages}
-                    className="bg-[#FF2A63] text-white border-[#FF2A63] ">Next</button>
-            </div> 
-        </div>
-    )
+	const pageChangeHandler = (newPage) => {
+		setCurrentPage(newPage);
+	};
+
+	return (
+		<div className="bg-[#F5F5F5] relative pt-2.5 lg:relative lg:mt-[6.4rem]">
+			<SideBarLg />
+			<ShopByCategory products={DUMMY_PRODUCTS} />
+			<BestDeal />
+			<ProductList products={products} />
+			<BestDeal />
+			<FlashSale />
+			<OfficialStores goods={DUMMY_STORES} />
+
+			<div className="flex">
+				<div className="flex flex-row gap-5 w-full justify-center items-center">
+					<button
+						onClick={() => pageChangeHandler(currentPage - 1)}
+						disabled={currentPage === 1}
+						className="bg-transparent text-[#FF2A63] border-[#FF2A63] "
+					>
+						Previous
+					</button>
+
+					<div className="border border-solid border-[#FF2A63] px-4 py-1">
+						{currentPage}
+					</div>
+
+					<button
+						onClick={() => pageChangeHandler(currentPage + 1)}
+						disabled={currentPage === totalPages}
+						className="bg-[#FF2A63] text-white border-[#FF2A63] px-2 py-1 rounded-sm"
+					>
+						Next
+					</button>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Product;
