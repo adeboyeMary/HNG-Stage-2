@@ -51,7 +51,7 @@ const ProductList = ({products}) => {
                                 
                                 <>
                                     <p className='text-black text-sm mt-[1rem] '>{product.name}</p>
-                                    <p className="leading-3 mt-3">{product.description}</p>
+                                    <p className="leading-[1rem] mt-3">{product.description}</p>
     
                                     <div className="flex flex-row my-3 justify-between">
                                         <p>#{product.current_price[0]?.NGN[0]}</p>

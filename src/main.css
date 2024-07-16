@@ -798,6 +798,14 @@ video {
   margin-top: 9px;
 }
 
+.ml-\[4rem\] {
+  margin-left: 4rem;
+}
+
+.ml-\[2rem\] {
+  margin-left: 2rem;
+}
+
 .flex {
   display: flex;
 }
@@ -1417,6 +1425,10 @@ video {
 
 .leading-3 {
   line-height: .75rem;
+}
+
+.leading-\[1rem\] {
+  line-height: 1rem;
 }
 
 .text-\[\#807E7E\] {

@@ -36,19 +36,17 @@ const cartSlice = createSlice({
                     name: action.payload.name,
                     quantity: 1,
                     price: action.payload.current_price[0]?.NGN[0],
-                    total: action.payload.total,
+                    total: action.payload.current_price[0]?.NGN[0],
                     image: action.payload.photos[0]?.url
                 })
-                state.total += action.payload.price;
+                state.total += action.payload.price * state.quantity;
                 
                 console.log(state.cartItems);
                 console.log( '........testingState..........');
             } else {
                 existingItem.quantity++;
-                state.total += action.payload.price;
-
-                console.log(state.cartItems);
-                console.log( '........testingS..........');
+                existingItem.total = existingItem.price * existingItem.quantity;
+                state.total += existingItem.price; 
             }
 
         },
@@ -56,6 +54,8 @@ const cartSlice = createSlice({
             const existingItem = state.cartItems.find(item => item.id === action.payload.id );
             existingItem.quantity++;
             state.totalQuantity++;
+            existingItem.total = existingItem.price * existingItem.quantity;
+            state.total += existingItem.price; 
         },
         decrementQuantity(state, action) {
             const existingItem = state.cartItems.find(item => item.id === action.payload.id );

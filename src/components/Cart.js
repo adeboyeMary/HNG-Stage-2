@@ -17,11 +17,14 @@ const Cart = () => {
     const decrementQuantityHandler = (cartItem) => {
         dispatch(cartActions.decrementQuantity(cartItem))
     };
+    const clearCartHandler = (cartItem) => {
+        dispatch(cartActions.clearCart(cartItem));
+    };
 
 
     return (
         
-        <div className='relative flex flex-row mt-[96px] '>
+        <div className='relative flex flex-col lg:flex-row mt-[96px] justify-center '>
            {cartItems.map((cartItem) => (
                 <div className='flex flex-row bg-[#FFFFFF] border-[1px] border-[#EDEDED] space-between 
                 w-[591px] rounded-md py-4 '>
@@ -33,6 +36,9 @@ const Cart = () => {
                     <p className='text-[17px] text-black '>{cartItem.name}</p>
                     <button className='bg-[#EDEDED] text-[14px] py-[1px] px-[1px] mt-4 '>Watches</button>
                     <button className='bg-[#EDEDED] text-[14px] py-[1px] px-[3px] mt-2 '>Official store</button>
+                    <button onClick={() => clearCartHandler(cartItem)}
+                        className=' hover:bg-[#E52659] hover:border-[#E52659] bg-[#FF2A63] 
+                        px-[15px] py-[1px] ml-[2rem] mt-[2rem] rounded-md text-white'>Clear</button>
                 </div>
 
                 <div className='flex flex-column ml-[6.9rem]'>
@@ -87,7 +93,7 @@ const Cart = () => {
                             </div>
                             <div className='ml-[15rem] '>
                                 <p>#{cartItem.price}</p>
-                                <p className='mt-[2rem]'>#{cartItem.price}</p>
+                                <p className='mt-[2rem]'>#{cartItem.total}</p>
                             </div>
                         </div>
 
