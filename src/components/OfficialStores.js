@@ -1,5 +1,6 @@
 import HorizontalScroller from "./HorizontalScroller";
-import Card from "./ui/Card";
+
+
 
 const OfficialStores = ({goods}) => {
     return (
@@ -11,12 +12,14 @@ const OfficialStores = ({goods}) => {
                 <ul className="flex flex-row">
                     
                     {goods.map((goods) => (
-                        <Card key={goods.id}>
-                        <li key={goods.id} className="ml-4 w-[98px]">
-                            <img src={goods.image} alt={goods.name} className="ml-[-5px]" />
-                            <p className="text-center mt-[1px]">{goods.name} </p>
+                        <li key={goods.id} className='bg-white border-[1px] m-2 p-2 ml-4 w-[98px] border-[#EDEDED] 
+                        hover:border-[1px] hover:border-[#E52659] lg:w-[8.3rem] lg:h-[8.3rem] lg:gap-1 '>
+                        <div className="ml-4 w-[98px] lg:w-[6rem] lg:h-[6rem] rounded-[54%] lg:justify-between ">
+                            <img src={goods.image} alt={goods.name} className="ml-[-5px] lg:w-[7.3rem] lg:h-[7rem]
+                            rounded-[50%] " />
+                        </div>
+                        <div><p className="text-center lg:w-[7rem] mt-[1px]">{goods.name} </p></div>
                         </li>
-                        </Card>
                     ))}
                     
                 </ul>

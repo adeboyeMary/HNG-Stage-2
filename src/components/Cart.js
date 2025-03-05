@@ -8,8 +8,17 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const cartItems = useSelector((state) => state.cart.cartItems)
+    const total = useSelector(state => state.cart.total);
+    console.log(total, '....../////whats in here.........');
+    const price = useSelector(state => state.cart.price);
+    const quantity = useSelector(state => state.cart.quantity);
+    console.log(quantity, '/////whats in here./////');
     const movieUrl = 'https://api.timbu.cloud/images/';
     const dispatch = useDispatch();
+
+    // if (cartItems === 0){
+    //     return <p className='font-bold text-red-500 text-center'>Cart is empty!</p>
+    // }
 
     const incrementQuantityHandler = (cartItem) => {
         dispatch(cartActions.incrementQuantity(cartItem))
@@ -66,7 +75,7 @@ const Cart = () => {
                 </div>
             ))}
             
-            {cartItems.map((cartItem) => (
+            {/* {cartItems.map((cartItem) => ( */}
                 <div>
                 
                     <div className='flex flex-row ml-4'>
@@ -88,12 +97,12 @@ const Cart = () => {
                     <div className=' bg-white border-[1px] h-[116px] border-[#807E7E] rounded-lg px-4 ml-4'>
                         <div className='flex flex-row'>
                             <div>
-                                <p className='text-16px '>item({cartItem.quantity})</p>
+                                <p className='text-16px '>item({cartItems.quantity})</p>
                                 <p className='text-16px mt-[2rem] '>Subtotal</p>
                             </div>
                             <div className='ml-[15rem] '>
-                                <p>#{cartItem.price}</p>
-                                <p className='mt-[2rem]'>#{cartItem.total}</p>
+                                <p>#{price}</p>
+                                <p className='mt-[2rem]'>#{cartItems.total}</p>
                             </div>
                         </div>
 
@@ -103,7 +112,7 @@ const Cart = () => {
                         </Link>
                     </div>
                 </div>
-            ))}
+            {/* ))} */}
             
         </div>
 

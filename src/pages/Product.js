@@ -9,39 +9,27 @@ import FlashSale from '../components/Flashsale';
 import { DUMMY_PRODUCTS } from "../constant/Dummy-Products";
 import { DUMMY_STORES } from "../constant/Dummy-stores";
 import OfficialStores from "../components/OfficialStores";
+import Footer from "../components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllProducts } from "../store/products-thunk";
 
 
 const Product = () => {
+	const {products, loading, error } = useSelector((state) => state.products);
+	const dispatch = useDispatch();
 	const [currentPage, setCurrentPage] = useState(1);
-	const [products, setProducts] = useState([]);
+	// const [products, setProducts] = useState([]);
 	const [totalPages, setTotalPages] = useState(0);
 
 	const itemsPerPage = 10;
-	const orgsId = process.env.REACT_APP_ORGS_ID;
-	const appId = process.env.REACT_APP_ID;
-	const apiKey = process.env.REACT_APP_API_KEY;
-	const apiBaseURL = process.env.REACT_APP_API_BASE_URL;
 
 	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const Url = `${apiBaseURL}/products?organization_id=${orgsId}&reverse_sort=false&page=${currentPage}&size=${itemsPerPage}&Appid=${appId}&Apikey=${apiKey}`;
+		dispatch(fetchAllProducts());
+	}, [dispatch] );
 
-				const response = await fetch(Url);
-				const data = await response.json();
-				setProducts(data.items);
-				console.log(data, "///////////////");
-				setTotalPages(data.total / data.size);
-			} catch (error) {
-				throw new Error("Failed to fetch products");
-			}
-		};
-		fetchData();
-	}, [currentPage, orgsId, apiKey, appId, apiBaseURL]);
-
-	// const startIndex = (currentPage - 1) * itemsPerPage;
-	// const endIndex = startIndex + itemsPerPage;
-	// const currentProducts = products?.slice(startIndex, endIndex);
+	const startIndex = (currentPage - 1) * itemsPerPage;
+	const endIndex = startIndex + itemsPerPage;
+	const currentProducts = products?.slice(startIndex, endIndex);
 
 	const pageChangeHandler = (newPage) => {
 		setCurrentPage(newPage);
@@ -52,6 +40,8 @@ const Product = () => {
 			<SideBarLg />
 			<ShopByCategory products={DUMMY_PRODUCTS} />
 			<BestDeal />
+			{loading && <p className="font-bold text-red-500 text-center mt-[10rem]">{loading} </p>}
+			{ error && <p className="font-bold text-red-500 text-center mt-[10rem]">{error} </p>}
 			<ProductList products={products} />
 			<BestDeal />
 			<FlashSale />
@@ -80,6 +70,8 @@ const Product = () => {
 					</button>
 				</div>
 			</div>
+
+			<Footer />
 		</div>
 	);
 };

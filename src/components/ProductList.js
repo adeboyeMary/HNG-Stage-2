@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 // import { useContext } from 'react';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // import full from '../asset/png/fullFlash.png';
 
@@ -16,8 +16,10 @@ import {cartActions} from '../store/cart-slice.js';
 
 
 const ProductList = ({products}) => {
-    const dispatch = useDispatch();
-    const movieUrl = 'https://api.timbu.cloud/images/';
+    const { loading, error } = useSelector((state) => state.products);
+    console.log(products, '.....products.......');
+    // const dispatch = useDispatch();
+    // const movieUrl = 'https://api.timbu.cloud/images/';
 
     // const cartCtx = useContext(CartContext);
 
@@ -25,10 +27,10 @@ const ProductList = ({products}) => {
     //     cartCtx.addItem(product)
     // };
    
-    const addToCartHandler2 = (product) => {
-        dispatch(cartActions.addToCart(product))
-        console.log('dispatched addToCart')
-    };
+    // const addToCartHandler2 = (product) => {
+    //     dispatch(cartActions.addToCart(product))
+    //     console.log('dispatched addToCart')
+    // };
 
     return (
         <div  className='ml-3 bg-white rounded-sm p-3 w-[94.67%] lg:w-[89.58%] lg:m-auto lg:my-3'>
@@ -36,43 +38,65 @@ const ProductList = ({products}) => {
             <hr className='border-1 border-[#EDEDED] mt-1 mb-2 ml-2' />
 
             <HorizontalScroller>
+
             {/* bg-white w-[94-67%] mr-2 flex flex-row whitespace-normal  */}
-                <ul className='bg-white w-[94-67%] mr-2 flex flex-row whitespace-normal'>
-                    {products?.map((product) => (
-                    <Card key={product.id}>
-                        <li key={product.id} className="text-[12px] w-[195px] h-[396px]  
-                         lg:m-0 lg:p-[10px] " >
-                            <Link to={`/${product.id}`}>
-                                <div className="bg-[#F5F5F5] m-auto pt-3 pb-3  lg:w-[147px] h-[187px] 
-                                    rounded-lg">
-                                    <img  src={`${movieUrl}${product.photos[0]?.url}`} alt={product.name} 
-                                    className="m-auto w-[82px] h-[147px] lg:w-[139px] lg:h-[147px]" />
-                                </div>
+                <ul className='bg-white w-[94.67%] mr-2 flex flex-row whitespace-normal gap-3 sm:gap-0 md:gap-0 lg:gap-4 '>
+                    {products.map((product) => (
+                        <li key={product.id} className="bg-white border-[1px] m-2 lg:m-0 p-[1rem] sm:p-[1rem] md:p-[1rem] lg:p-[1rem] 
+                            w-[12rem] sm:w-[16rem] md:w-[16rem] lg:w-[16rem] border-[#EDEDED] justify-between lg:justify-between
+                            hover:border-[1px] hover:border-[#E52659] h-[24rem] lg:h-[31rem] lg:break-normal flex flex-col 
+                            lg:mb-[1rem] " >
+                            {/* <div className=' lg:w-[100%] '> */}
+                                    <div className="bg-[#F5F5F5] rounded-lg p-[0.7rem] sm:p-[0.7rem] md:p-[0.7rem] lg:p-[0.7rem] ">
+                                            {/* lg:w-[147px] h-[187px]  */}
+                                        {/* <img  src={`${movieUrl}${product.photos[0]?.url}`} alt={product.name}  */}
+                                        <img  src={product.image} alt={product.name} className='w-[8rem] sm:w-[14rem] md:w-[14rem] 
+                                        lg:w-[15rem] h-[7rem] lg:h-[15rem] ' />
+                                        {/* className="m-auto w-[82px] h-[147px] lg:w-[139px] lg:h-[147px]" */}
+                                    </div>
                                 
-                                <>
-                                    <p className='text-black text-sm mt-[1rem] '>{product.name}</p>
-                                    <p className="leading-[1rem] mt-3">{product.description}</p>
+                                    <div className='w-[10rem] sm:w-[18rem] md:w-[14rem] lg:w-[14rem] h-[10rem]   '>
+                                        <p className='text-black text-[12px] mt-[1rem] '>{product.title}</p>
+                                        {/* <p className=" mt-3 text-[12px] ">{product.description}</p> */}
     
-                                    <div className="flex flex-row my-3 justify-between">
-                                        <p>#{product.current_price[0]?.NGN[0]}</p>
-                                        <p className='discount text-[#FF2A63] '>#450,000</p>
-                                    </div>
-                                    <div className=' flex-col hidden lg:block lg:flex-row text-center text-black'>
-                                        <span className='bg-[#E6E6E6] py-[3px] px-[7px] lg:py-[px] lg:px-[5px] rounded-sm '>Watches</span>
-                                        <span className='ml-3 bg-[#E6E6E6] py-[2px] px-[5px] mt-2 lg:mt-0 rounded-sm '>Official store</span>
-                                    </div>
-                                    <div className="flex flex-row my-3 justify-between">
-                                        <p className='text-[11px]'>325 sold</p>
-                                        <div className='flex flex-row'>
-                                            <img src={star} alt='star' className='w-[10px] h-[10px] mt-[1px]' />
-                                            <p className='flex flex-row  ml-[6px] text-[11px] '>4.5</p>
+                                        <div className="flex flex-row my-3 justify-between text-[12px]">
+                                            {/* <p>#{product.current_price[0]?.NGN[0]}</p> */}
+                                            <p className='font-bold'>${product.price}</p>
+                                            <p className='discount text-[#FF2A63] '>#450,000</p>
+                                        </div>
+                                        <div className='hidden  lg:flex text-black lg:justify-between'>
+                                            <span className='bg-[#E6E6E6] px-[3px] py-[2px] lg:px-[4px] rounded-sm text-[11px] '>Watches</span>
+                                            <span className='ml- bg-[#E6E6E6] py-[2px] px-[5px] mt-2 lg:mt-0 lg:px-1 rounded-sm text-[11px] '>Official store</span>
                                         </div>
                                         
+                                        <div className="flex flex-row my-3 justify-between">
+                                            <p className='text-[11px]'>{product.rating.count} sold</p>
+                                            <div className='flex flex-row'>
+                                                <img src={star} alt='star' className='w-[10px] h-[10px] mt-[1px]' />
+                                                <p className='flex flex-row  ml-[6px] text-[11px] '>{product.rating.rate}</p>
+                                            </div>
+                                        
+                                        </div>
                                     </div>
-                                </>
-                                    </Link>
+                                    <div className='md:ml-[0.5rem] lg:ml-[0.5rem] '>
+                                        <button className='bg-[#FF2A63] text-white px-[10px] py-[10px] rounded-[4px]
+                                            hover:bg-[#E52659] w-[10rem] md:w-[13rem] lg:w-[13rem] text-[12px] '
+                                            // onClick={() => addToCartHandler(product)} 
+                                            // onClick={() => addToCartHandler2(product)}
+                                            
+                                            >
+                                                Add to cart
+                                        </button></div>
+                                    
+                            {/* </div> */}
+                        </li>
+                        
+                    ))}
+                </ul>
+            </HorizontalScroller>
 
-                                    <div className=' ml-[8px] lg:ml-0 '>
+             {/* <div className=' ml-[8px] lg:ml-0 '>
+             <Link to={`/${product.id}`}>
                                         <button 
                                             // onClick={() => addToCartHandler(product)} 
                                             onClick={() => addToCartHandler2(product)}
@@ -81,16 +105,7 @@ const ProductList = ({products}) => {
                                             >
                                                 Add to cart
                                         </button>
-                                    </div>
-                                </li>
-                            </Card>
-                            ))}
-                        
-            
-            
-                
-                </ul>
-            </HorizontalScroller>
+                                    </div> */}
         </div>
         
     )
