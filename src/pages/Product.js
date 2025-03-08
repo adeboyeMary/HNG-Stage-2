@@ -15,40 +15,39 @@ import { fetchAllProducts } from "../store/products-thunk";
 
 
 const Product = () => {
-	const {products, loading, error } = useSelector((state) => state.products);
+	const {products } = useSelector((state) => state.products);
 	const dispatch = useDispatch();
 	const [currentPage, setCurrentPage] = useState(1);
-	// const [products, setProducts] = useState([]);
-	const [totalPages, setTotalPages] = useState(0);
 
-	const itemsPerPage = 10;
+	const itemsPerPage = 7;
+	const totalPages = Math.ceil(products.length / itemsPerPage);
 
 	useEffect(() => {
 		dispatch(fetchAllProducts());
 	}, [dispatch] );
 
+	
+	
 	const startIndex = (currentPage - 1) * itemsPerPage;
 	const endIndex = startIndex + itemsPerPage;
-	const currentProducts = products?.slice(startIndex, endIndex);
+	const currentProducts = products.slice(startIndex, endIndex);
 
 	const pageChangeHandler = (newPage) => {
-		setCurrentPage(newPage);
+		if(newPage > 0 && newPage <= totalPages ){
+			setCurrentPage(newPage);
+		}
+		console.log(currentProducts, '...........');
 	};
 
 	return (
 		<div className="bg-[#F5F5F5] relative pt-2.5 lg:relative lg:mt-[6.4rem]">
+			{/* { error && <p className="font-bold text-red-500 text-center mt-[5rem]">{error} </p>} */}
 			<SideBarLg />
 			<ShopByCategory products={DUMMY_PRODUCTS} />
 			<BestDeal />
-			{loading && <p className="font-bold text-red-500 text-center mt-[10rem]">{loading} </p>}
-			{ error && <p className="font-bold text-red-500 text-center mt-[10rem]">{error} </p>}
-			<ProductList products={products} />
-			<BestDeal />
-			<FlashSale />
-			<OfficialStores goods={DUMMY_STORES} />
-
+			<ProductList products={currentProducts} />
 			<div className="flex">
-				<div className="flex flex-row gap-5 w-full justify-center items-center">
+				<div className="flex flex-row gap-5 w-full pt-[1rem] justify-center items-center">
 					<button
 						onClick={() => pageChangeHandler(currentPage - 1)}
 						disabled={currentPage === 1}
@@ -70,7 +69,9 @@ const Product = () => {
 					</button>
 				</div>
 			</div>
-
+			<BestDeal />
+			<FlashSale />
+			<OfficialStores goods={DUMMY_STORES} />
 			<Footer />
 		</div>
 	);

@@ -25,7 +25,7 @@ const Header = () => {
                     <SearchBar />
                 </>
                 
-                <span className='lg:flex lg:flex-row hidden'><img alt='smileyIcon' src={smiley} 
+                <span className='lg:flex lg:flex-row hidden m-2'><img alt='smileyIcon' src={smiley} 
                 className='m-2 '/>Account</span>
                 
                 <Link to='/checkout' className='hidden lg:flex lg:flex-row ' >

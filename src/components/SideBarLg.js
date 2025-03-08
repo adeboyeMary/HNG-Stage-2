@@ -13,32 +13,35 @@ import store from '../asset/svg/store.svg';
 
 const SideBarLg = () => {
     return (
-        <div className='flex flex-column lg:pt-2 lg:flex-row lg:w-[89.58%] lg:m-auto'>
-                <ul className='hidden lg:block lg:w-[40%] lg:bg-[#ffffff] lg:border-[#E6E6E6] lg:border-[1px] 
-                 lg:rounded-sm  '>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={electronic} alt='electronic' /> Electronics</li>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={telecoms} alt='telecoms' />Telecommunication</li>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={food} alt='food'/>Food</li>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={sport} alt='sport'/>Sports</li>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={finance} alt='finance'/>Finances</li>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={photo} alt='photography'/>Photography</li>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={business} alt='business'/>Business</li>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={health} alt='health' />Health</li>
-                    <li className='flex flex-row mb-[10px] hover:text-[#E52659] hover:font-bold gap-3'><img src={travel} alt='travel'/> Travel</li>
-                    <li className='flex flex-row mb-[] hover:text-[#E52659] hover:font-bold gap-3'><img src={store} alt='store'/>Stores</li>
-                    {/* <li className='flex flex-row'><img src={} alt=''/>Official stores</li> */}
+        <div className='flex flex-column lg:pt-2 lg:w-[89.58%] lg:m-auto  '>
+            {/* md:h-[10vh] lg:h-[20vh] */}
+                <ul className='hidden lg:block '>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={electronic} alt='electronic' /> Electronics</li>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={telecoms} alt='telecoms' />Telecommunication</li>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={food} alt='food'/>Food</li>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={sport} alt='sport'/>Sports</li>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={finance} alt='finance'/>Finances</li>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={photo} alt='photography'/>Photography</li>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={business} alt='business'/>Business</li>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={health} alt='health' />Health</li>
+                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={travel} alt='travel'/> Travel</li>
+                    <li className='flex flex-row hover:text-[#E52659] hover:font-bold gap-3'><img src={store} alt='store'/>Stores</li>
                 </ul>
 
-                <div className='lg:flex lg:flex-row lg:w-60%'>
-                    <div className=' m-auto relative mt-[86px] lg:m-0 lg:mt-0'>
-                    {/* w-[94.67%] */}
-                        <img src={pagePoster} alt='pagePoster' className='rounded-[6px] h-[100%] lg:block' />
+                {/* <div className='lg:flex xl:flex lg:flex-row xl:flex-row '> */}
+                {/* lg: xl:w-[74%] */}
+                    <div className=' m-auto relative mt-[86px] '>
+                    {/* w-[94.67%] lg:w-[70%] xl:w-[70%] lg:m-0 lg: xl:mt-0 */}
+                        <img src={pagePoster} alt='pagePoster' className='rounded-[6px] lg:block' />
                     </div>
-                    <div className='hidden lg:block lg:w-[19rem]  lg:mt-2'>
-                        <img src={half} alt='flashSalePoster' className='h-[100%]' />
+                    <div className='hidden lg:block '>
+                        <img src={half} alt='flashSalePoster' className='' />
                     </div>
-                </div>
+                {/* </div> */}
             </div>  
+            // xl:block lg:w-[26%] xl:w-[24%] lg:bg-[#ffffff] xl:bg-[#ffffff] 
+            // lg:border-[#E6E6E6] xl:border-[#E6E6E6] lg:border-[1px] xl:border-[1px] lg:rounded-sm 
+            // xl:rounded-sm lg:mt-[10px] lg:h-[51vh] xl:h-[18.4vh] lg:pl-3 xl:pl-3 lg:pt-3
     )
 };
 
