@@ -10,20 +10,24 @@ const FlashSale = () => {
             <hr className='border-1 border-[#EDEDED] mt-1 mb-2 ml-2' />
 
             <div className='flex flex-row  lg:m-auto lg:my-3 '>
-                <div className='bg-[#E6E6E6] w-[400px] h-[242px] mt-[11px] md:h-[362px] lg:h-[280px] rounded-lg'>
-                    <img src={image6} alt='wristwatch' className='mt-[2.5rem] md:mt-[1rem] lg:mt-[1.7rem]' /> 
+                <div className='bg-[#E6E6E6] w-[400px] h-[242px] mt-[11px] md:h-[362px] lg:h-[21.4rem] rounded-lg
+                lg:w-[37rem] xl:w-[38rem] xl:h-[25.4rem] '>
+                    <img src={image6} alt='wristwatch' className='mt-[2.5rem] md:mt-[1rem] lg:mt-[2.9rem] 
+                    xl:ml-[16px] ' /> 
                 </div>
 
-                <div className=''>
+                <div className='lg:w-[48rem] xl:w-[42rem] '>
                     <div className='bg-white p-4'>
-                        <p className='text-[23px] md:text-[36px] md:mt-4 '>Apple watch Ultra</p>
-                        <p className='text-[13px] md:text-[19.5px] '>Meet the most rugged and capable Apple Watch ever created ... </p>
-                        <div className="flex flex-row my-3 justify-between text-[13px] md:text-[19.5px] ">
+                        <p className='text-[23px] md:text-[36px] md:mt-4 xl:text-[43px] '>Apple watch Ultra</p>
+                        <p className='text-[13px] md:text-[19.5px] lg:text-[18.5px] xl:text-[20.7px] '>
+                            Meet the most rugged and capable Apple Watch ever created ... </p>
+                        <div className="flex flex-row my-3 justify-between text-[13px] md:text-[19.5px] 
+                        xl:text-[20.7px] ">
                             <p>#376,000</p>
                             <p className='discount'>#400,000</p>
                         </div>
 
-                        <div className='flex flex-row text-black  text-[9px] md:text-[16px] '>
+                        <div className='flex flex-row text-black  text-[9px] md:text-[16px] xl:text-[18px] '>
                             <span className='bg-[#E6E6E6] py-[3px] px-[7px] md:py-[3px] lg:py-[3px] lg:px-[5px] 
                             rounded-sm '>
                                 Watches
@@ -33,7 +37,8 @@ const FlashSale = () => {
                             </span>
                         </div>
 
-                        <div className='flex flex-row justify-between text-[10px] md:text-[14.5px] mt-2'>
+                        <div className='flex flex-row justify-between text-[10px] md:text-[14.5px] mt-2 
+                        xl:text-[16px]'>
                             <p>7832 sold</p>
                             <div className='flex flex-row gap-1'>
                                 <img src={star} alt='star' />
@@ -42,7 +47,8 @@ const FlashSale = () => {
                         </div>
                     </div>
                 </div>
-                <img src={fullFlash} alt='flashSalePoster' className='hidden lg:block lg:w-[50%] ' />
+                <img src={fullFlash} alt='flashSalePoster' className='hidden lg:block lg:w-[20rem] xl:w-[29rem]
+                xl:mt-[10px] ' />
             </div>
         </div>
     )

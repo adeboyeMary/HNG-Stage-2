@@ -19,3 +19,24 @@ import { fetchProducts, fetchProductsSuccess, fetchProductFailure } from './prod
         }
     }
 };
+
+export const fetchProductDetails = (productId) => {
+    return async(dispatch) => {
+        dispatch(fetchProducts());
+        try{
+            const url =`${process.env.REACT_APP_GET_ALL_PRODUCTS}/${productId}`;
+            // const url =`${process.env.REACT_APP_GET_ALL_PRODUCTS}/${productId}` || '';
+
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if(response.ok){
+                dispatch(fetchProductsSuccess([data]));
+            } else {
+                dispatch(fetchProductFailure('cannot get details, try again.'));
+            }
+        } catch (error) {
+            dispatch(fetchProductFailure(error.message));
+        }
+    }
+};

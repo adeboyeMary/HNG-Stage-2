@@ -10,7 +10,7 @@ const BestDeal = () => {
                 <span className='text-[#FF2A63]'> 80%</span> OFF</p>
                 
             <img src={wristwatch} alt='wristwatchPoster' className='w-[138px] lg:w-[140px] md:mr-[8rem] 
-            mr-[0.4rem] lg:mr-[22rem] ' />
+            mr-[0.4rem] lg:mr-[12rem] xl-[22rem] ' />
         </div>
     )
 };

@@ -20,3 +20,20 @@ code {
 .products {
   position: relative;
 }
+
+@media only screen and (min-width: 1025px) {
+  .oraimoPoster {
+    height: 41.3vh !important;
+    height: 30% !important;
+    width: 97% !important;
+
+  }
+  .halfPic {
+    height: 90% !important;
+    /* height: 41vh !important; */
+    /* width: 50% !important; */
+  }
+  .halfPic img {
+    height: 100%;
+  }
+}

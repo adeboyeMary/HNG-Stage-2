@@ -47,7 +47,7 @@ const Product = () => {
 			<BestDeal />
 			<ProductList products={currentProducts} />
 			<div className="flex">
-				<div className="flex flex-row gap-5 w-full pt-[1rem] justify-center items-center">
+				<div className="flex flex-row gap-5 w-full pt-[1rem] lg:pt-[0.3rem] justify-center items-center">
 					<button
 						onClick={() => pageChangeHandler(currentPage - 1)}
 						disabled={currentPage === 1}

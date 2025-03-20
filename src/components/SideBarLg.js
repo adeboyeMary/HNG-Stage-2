@@ -13,29 +13,32 @@ import store from '../asset/svg/store.svg';
 
 const SideBarLg = () => {
     return (
-        <div className='flex flex-column lg:pt-2 lg:w-[89.58%] lg:m-auto  '>
+        <div className='flex flex-column lg:pt-2 lg:w-[89.58%] lg:m-auto lg:gap-1  '>
             {/* md:h-[10vh] lg:h-[20vh] */}
-                <ul className='hidden lg:block '>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={electronic} alt='electronic' /> Electronics</li>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={telecoms} alt='telecoms' />Telecommunication</li>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={food} alt='food'/>Food</li>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={sport} alt='sport'/>Sports</li>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={finance} alt='finance'/>Finances</li>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={photo} alt='photography'/>Photography</li>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={business} alt='business'/>Business</li>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={health} alt='health' />Health</li>
-                    <li className='flex flex-row pb-[10px] xl:pb-[6px] hover:text-[#E52659] hover:font-bold gap-3'><img src={travel} alt='travel'/> Travel</li>
+                <ul className='hidden lg:block bg-white p-[1rem] w-[41%] h-[23.9vh] mt-[0.5rem] xl:h-[19.5rem] '>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={electronic} alt='electronic' /> Electronics</li>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={telecoms} alt='telecoms' />Telecommunication</li>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={food} alt='food'/>Food</li>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={sport} alt='sport'/>Sports</li>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={finance} alt='finance'/>Finances</li>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={photo} alt='photography'/>Photography</li>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={business} alt='business'/>Business</li>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={health} alt='health' />Health</li>
+                    <li className='flex flex-row pb-[5px] xl:pb-[5px] hover:text-[#E52659] hover:font-bold gap-3'><img src={travel} alt='travel'/> Travel</li>
                     <li className='flex flex-row hover:text-[#E52659] hover:font-bold gap-3'><img src={store} alt='store'/>Stores</li>
                 </ul>
 
                 {/* <div className='lg:flex xl:flex lg:flex-row xl:flex-row '> */}
                 {/* lg: xl:w-[74%] */}
-                    <div className=' m-auto relative mt-[86px] '>
+                    <div className=' m-auto relative mt-[86px] lg:mt-0 lg:w-[113%] xl:w-[113%] '>
                     {/* w-[94.67%] lg:w-[70%] xl:w-[70%] lg:m-0 lg: xl:mt-0 */}
-                        <img src={pagePoster} alt='pagePoster' className='rounded-[6px] lg:block' />
+                        <img src={pagePoster} alt='pagePoster' className='oraimoPoster rounded-[6px] lg:block 
+                        lg:h-[25.2vh] lg:w-[100%]  ' />
+                        {/* xl:h-[32.3] 2xl:h-[41.3vh] */}
                     </div>
-                    <div className='hidden lg:block '>
-                        <img src={half} alt='flashSalePoster' className='' />
+                    <div className='halfPic hidden lg:block lg:h-[24.5vh] lg:w-[38%] lg:mt-[0.4rem] '>
+                    {/* xl:h-[31vh */}
+                        <img src={half} alt='flashSalePoster' className='lg:h-[100%] ' />
                     </div>
                 {/* </div> */}
             </div>  

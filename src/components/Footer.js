@@ -80,7 +80,7 @@ const Footer = () => {
                 
                 
             <footer>
-                <div className="flex flex-row ml-[5rem] md:ml-[16rem] lg:justify-center mt-10">
+                <div className="flex flex-row ml-[5rem] md:ml-[16rem] lg:justify-center lg:ml-0  mt-10">
                     <span><img src={ig} alt="ig" className='w-[60%] lg:w-[44%]' /></span>
                     <span><img src={x} alt="x" className='mt-[4px] w-[60%] lg:w-[44%]' /></span>
                     <span><img src={icon} alt="icon" className='w-[60%] lg:w-[44%]' /></span>
@@ -96,7 +96,7 @@ const Footer = () => {
                     <span className='lg:ml-16 hover:text-[#E52659] hover:font-bold'>Term of use</span>
                 </div>
 
-                <div  className='ml-[3rem] md:ml-[13.5rem] mb-5 text-[10px]'>
+                <div  className='ml-[3rem] md:ml-[13.5rem] mb-5 text-[10px] lg:ml-[21.5rem] xl:ml-[32.5rem] '>
                     <span>Sonjinwoostores&copy; 2020 - 2023, All Rights Reserved.</span></div>
             </footer>
         </div>
