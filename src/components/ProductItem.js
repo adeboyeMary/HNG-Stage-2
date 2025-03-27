@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { cartActions } from '../store/cartSlice';
+import { cartActions } from '../store/cart-slice';
 
 import delivery from '../asset/svg/delivery.svg';
 import love from '../asset/svg/love.svg';
@@ -21,6 +21,7 @@ const ProductItem = ({products}) => {
         setIsAdded(true);
         setShowModal(true);
     };
+    
     const closeModalHandler = () => {
         setShowModal(false);
     };
@@ -99,7 +100,7 @@ const ProductItem = ({products}) => {
                             <img src={isAdded ? loveFilled : love } alt='love' 
                             className={isAdded ? 'h-[33px] mt-[-1px] mr-[1rem] lg:mt-[6px] ' : 'mt-[-7px] lg:mt-[3px]'} />
                             <Link to=''>
-                            <button onClick={addToCartHandler}
+                            <button onClick={() => addToCartHandler(product)}
                             className='bg-[#FF2A63] text-white px-[4rem] py-[0.4rem] lg:mt-2 rounded-md 
                             hover:bg-[#E52659] lg:px-[3rem] lg:py-[0.4rem] lg:text-[13px] md:px-[3.5rem] 
                             md:py-[0.4rem] xl:px-[4rem] text-[12px] '>Add to cart</button>

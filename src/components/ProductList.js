@@ -60,9 +60,9 @@ const ProductList = ({products}) => {
                                             <img src={star} alt='star' className='w-[10px] md:w-[1rem] h-[10px] 
                                             mt-[1px]' />
                                             <p className='flex flex-row  ml-[6px] md:ml-[2.5px] text-[11px] '>
-                                                {product.rating.rate}</p>
+                                                {product.rating.rate}
+                                            </p>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </Link>
@@ -71,9 +71,7 @@ const ProductList = ({products}) => {
                                 <button className='bg-[#FF2A63] text-white px-[10px] py-[10px] 
                                 rounded-[4px]
                                     hover:bg-[#E52659] w-[10rem] md:w-[13rem] lg:w-[13rem] text-[12px] '
-                                    onClick={() => addToCartHandler(product)} 
-                                    // onClick={() => addToCartHandler2(product)}
-                                            
+                                    onClick={() => addToCartHandler(product)}                                             
                                     >
                                         Add to cart
                                 </button>
