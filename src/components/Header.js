@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
@@ -9,6 +10,9 @@ import SearchBar from './SearchBar';
 
 
 const Header = () => {
+    const showCart = useSelector((state) => state.cart.cart);
+
+
     return (
         <header className="flex lg:flex-row lg:justify-between bg-white text-sm w-[100%] 
         lg:fixed top-0 z-10 p-2 ">
