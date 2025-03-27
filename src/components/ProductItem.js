@@ -17,8 +17,7 @@ const ProductItem = ({products}) => {
 
 
     const addToCartHandler = (product) => {
-        // dispatch(cartActions.addToCart(product))
-        // console.log('dispatched addToCart')
+        dispatch(cartActions.addToCart(product));
         setIsAdded(true);
         setShowModal(true);
     };

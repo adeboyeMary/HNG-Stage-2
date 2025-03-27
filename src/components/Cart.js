@@ -7,26 +7,8 @@ import CartItems from './CartItems';
 
 
 const Cart = () => {
-    // const cartItems = useSelector((state) => state.cart.cartItems);
     const {total, totalQuantity, price } = useSelector(state => state.cart);
-    // console.log(total, '....../////whats in here.........');
-    // const price = useSelector(state => state.cart.price);
-    // const quantity = useSelector(state => state.cart.quantity);
-    // console.log(quantity, '/////whats in here./////');
-    // const movieUrl = 'https://api.timbu.cloud/images/';
-
-//     if (!cartItems || cartItems.length === 0){
-//         return <p className='font-bold text-red-500 text-5xl text-center'>Cart is empty!</p>
-//     } else {
-//         <p>Carrt is not emptyyyy!</p>
-//     }
-// console.log(total, )
-
-//     console.log(cartItems, ".....Current cart items"); // Debugging
-
    
-
-
     return (
         
         <div className='relative flex flex-col md:flex-col lg:flex-row mt-[118px] justify-center gap-[2rem]
@@ -63,7 +45,6 @@ const Cart = () => {
                     <Link to='/'>
                         <button className='hover:bg-[#E52659] hover:border-[#E52659] text-white py-[1px] bg-[#FF2A63] 
                         rounded-md w-[51%] ml-[5.5rem] md:w-[31%] md:ml-[12.5rem] lg:w-[53%] lg:ml-[5rem] '>
-                                {/* px-[15px]  ml-[7rem] */}
                             Proceed to checkout
                         </button>
                     </Link>
