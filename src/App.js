@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './main.css';
@@ -7,7 +6,7 @@ import RootLayout from './pages/RootLayout';
 import Product from './pages/Product';
 import Checkout from './pages/Checkout';
 import OrderSuccessful from './pages/OrderSuccessful';
-import ProductDetails, { loader as productDetailsLoader } from './pages/ProductDetails';
+import ProductDetails from './pages/ProductDetails';
 
 
 const router = createBrowserRouter([
@@ -18,12 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Product />,
-        // loader: productLoader
       },
       {
         path: 'checkout',
         element: <Checkout />,
-        // loader: cartLoader
       },
       {
         path: 'orderSuccessful',
@@ -32,7 +29,6 @@ const router = createBrowserRouter([
       {
         path: ':productId',
         element: <ProductDetails />,
-        // loader: productDetailsLoader
       }
     ]
   }

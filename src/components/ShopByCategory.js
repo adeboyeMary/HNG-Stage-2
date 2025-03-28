@@ -15,11 +15,12 @@ const ShopByCategory = ({products}) => {
                         border-[#EDEDED] hover:border-[1px] hover:border-[#E52659] lg:w-[7.8rem] lg:h-[7.8rem] 
                          justify-between'>
                             <div className='ml-4 lg:ml-[0.4rem] w-[4rem] lg:w-[6.5rem] lg:h-[6rem]'>
-                                <img src={product.image} alt={product.name} className='ml-[-5px] w-[4rem] lg:w-[5.5rem] 
-                                lg:h-[5.5rem] rounded-[50%] lg:ml-[3px] ' />
+                                <img src={product.image} alt={product.name} className='ml-[-5px] w-[4rem] 
+                                lg:w-[5.5rem] lg:h-[5.5rem] rounded-[50%] lg:ml-[3px] ' />
                             </div>
                             <div>
-                                <p className='text-center w-[5.5rem] lg:w-[5rem] mt-[1px] lg:mt-[-0.5rem] lg:ml-[0.9rem] '>
+                                <p className='text-center w-[5.3rem] lg:w-[5rem] mt-[1px] lg:mt-[-0.5rem] lg:ml-[0.9rem] 
+                                text-[13px] '>
                                     {product.name}
                                 </p>
                             </div>

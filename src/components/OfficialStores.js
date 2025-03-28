@@ -10,7 +10,6 @@ const OfficialStores = ({goods}) => {
 
             <HorizontalScroller>
                 <ul className="flex flex-row">
-                    
                     {goods.map((goods) => (
                         <li key={goods.id} className='bg-white border-[1px] m-2 p-2 ml-4 w-[7rem] border-[#EDEDED] 
                         hover:border-[1px] hover:border-[#E52659] lg:w-[8.3rem] lg:h-[8.3rem] xl:w-[8.6rem]'>
@@ -20,10 +19,9 @@ const OfficialStores = ({goods}) => {
                             lg:h-[6.4rem] rounded-[50%] xl:w-[7rem] xl:h-[6.2rem] " />
                         </div>
                         <div><p className="text-center w-[6rem] lg:w-[7rem] mt-[1px] lg:mt-[1px] 
-                        xl:w-[8rem]">{goods.name} </p></div>
+                        xl:w-[8rem] text-[13px]">{goods.name} </p></div>
                         </li>
                     ))}
-                    
                 </ul>
             </HorizontalScroller>
         </div>

@@ -60,7 +60,6 @@ const MainHeader = () => {
                     </Link>
                 </div>
             </div>
-            {/* bg-white w-100% mb-5 */}
             <div className='lg:hidden'>
                 <Sidebar />
             </div>

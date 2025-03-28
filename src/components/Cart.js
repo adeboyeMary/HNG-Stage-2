@@ -4,10 +4,26 @@ import delivery from '../asset/svg/delivery.svg';
 import visa from '../asset/svg/visa.svg';
 import { Link } from 'react-router-dom';
 import CartItems from './CartItems';
+import Modal from './ui/Modal';
+import { useState } from 'react';
 
 
 const Cart = () => {
-    const {total, totalQuantity, price } = useSelector(state => state.cart);
+    // const dispatch = useDispatch();
+    const {totalPrice, totalQuantity, price } = useSelector(state => state.cart);
+    const [showModal, setShowModal] = useState(false);
+
+    const overLayHandler = () => {
+        setShowModal(true);
+        // dispatch(cartActions.clearCart());
+        // window.location.href = '/';
+    };
+
+    const closeModalHandler = () => {
+        setShowModal(false);
+        // dispatch(cartActions.clearCart());
+    }
+
    
     return (
         
@@ -16,7 +32,6 @@ const Cart = () => {
             <CartItems />
             <div className='md:w-[] lg:w-[40%] '>
                 <div className='flex flex-row'>
-                {/* ml-4 */}
                     <img src={delivery} alt='delivery' />
                     <p className='ml-3'>Payment method</p>
                     <hr className='border-[1px] border-[#807E7E] '></hr>
@@ -38,16 +53,41 @@ const Cart = () => {
                         </div>
                         <div className=''>
                             <p>$ {price}</p>
-                            <p className='mt-[2rem]'>${total}</p>
+                            <p className='mt-[2rem]'>${totalPrice}</p>
                         </div>
                     </div>
-
-                    <Link to='/'>
-                        <button className='hover:bg-[#E52659] hover:border-[#E52659] text-white py-[1px] bg-[#FF2A63] 
+                    
+                    <button onClick={overLayHandler} 
+                        className='hover:bg-[#E52659] hover:border-[#E52659] text-white py-[1px] bg-[#FF2A63] 
                         rounded-md w-[51%] ml-[5.5rem] md:w-[31%] md:ml-[12.5rem] lg:w-[53%] lg:ml-[5rem] '>
                             Proceed to checkout
-                        </button>
-                    </Link>
+                    </button>
+                    
+
+                    {showModal && (
+                        <Modal onHideOverlay={closeModalHandler}>
+                            <h1 className='bg-[#FF2A63] p-4 text-white font-bold text-[18px] '>Thank you for your patronage!</h1>
+                            <div className='bg-[#F5F5F5] p-5 '>
+                                <p className=' text-black mb-3 text-[13px] md:text-[14px] lg:text-[16px] '>
+                                    Payment successful! You will receive an email shortly.
+                                </p>
+                                <div className='lg:ml-[3rem] '>
+                                    <Link to='/'>
+                                        <button className='bg-[#FF2A63] text-white border-[#FF2A63] px-2 
+                                            py-1 rounded-sm hover:bg-transparent hover:border-[#72283c] 
+                                            hover:border-solid hover:border-[1px] text-[13px] md:text-[13px]
+                                            hover:text-[#72283c]'>Home
+                                        </button>
+                                    </Link>
+                                    <button onClick={closeModalHandler}
+                                    className='bg-transparent border-[#FF2A63] border-solid border-[1px] 
+                                    text-[#FF2A63] ml-[1rem] text-[13px] lg:ml-[2rem] hover:border-[#72283c] px-3.5  py-1
+                                    hover:bg-[#72283c] hover:text-white 
+                                    rounded-sm'>Close</button>
+                                </div>
+                            </div>
+                        </Modal>
+                    )}
                 </div>
             </div>
         </div>
