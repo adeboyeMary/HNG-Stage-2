@@ -1,5 +1,5 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { cartActions } from '../store/cart-slice';
+import { useSelector } from 'react-redux';
+// import { cartActions } from '../store/cart-slice';
 import delivery from '../asset/svg/delivery.svg';
 import visa from '../asset/svg/visa.svg';
 import { Link } from 'react-router-dom';
@@ -12,6 +12,8 @@ const Cart = () => {
     // const dispatch = useDispatch();
     const {totalPrice, totalQuantity, price } = useSelector(state => state.cart);
     const [showModal, setShowModal] = useState(false);
+    const cartItems = useSelector((state) => state.cart.cartItems);
+
 
     const overLayHandler = () => {
         setShowModal(true);
@@ -26,10 +28,14 @@ const Cart = () => {
 
    
     return (
-        
-        <div className='relative flex flex-col md:flex-col lg:flex-row mt-[118px] justify-center gap-[2rem]
-        w-[94%] ml-[0.7rem] md:w-[82%] md:gap-[2rem] lg:w-[75%] md:ml-[4.5rem] lg:ml-[9rem] lg:gap-[1rem] '>
+        <div className='mt-[118px] flex justify-center items-center w-full min-h-[50vh]'>
+        {cartItems && cartItems.length > 0 ? (
+        <div className='relative flex flex-col md:flex-col lg:flex-row justify-center gap-[2rem]
+        w-[94%] ml-[0.7rem] md:w-[82%] md:gap-[2rem] lg:w-[75%] md:ml-[4.5rem] lg:ml-[rem] lg:gap-[1rem]'>
+            {/* className='relative flex flex-col md:flex-col lg:flex-row mt-[118px] justify-center gap-[2rem] */}
+            {/* w-[94%] ml-[0.7rem] md:w-[82%] md:gap-[2rem] lg:w-[75%] md:ml-[4.5rem] lg:ml-[9rem] lg:gap-[1rem] ' */}
             <CartItems />
+            
             <div className='md:w-[] lg:w-[40%] '>
                 <div className='flex flex-row'>
                     <img src={delivery} alt='delivery' />
@@ -91,8 +97,10 @@ const Cart = () => {
                 </div>
             </div>
         </div>
-
-         
+         ): (
+            <p className='font-bold text-red-500 text-xl text-center'>Cart is empty!</p>
+        )}
+        </div>
     )
 };
 
